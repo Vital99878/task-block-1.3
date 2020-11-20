@@ -1,0 +1,50 @@
+//  COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-text-header: black;
+$color-text-content: #1B1C21;
+$color-text-tab: #7E7E82;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-bg-nav: white;
+$color-bg-main: #F8F8F8;
+$color-bg-icon: #FF3E79;
+$color-bg-dark: #5643fa;
+
+//$color-grey-light: #f7f7f7;
+//$color-grey-dark: #777;
+//$color-grey-darker-2: #999;
+//$color-grey-darkest-3: #333;
+
+
+// GRID
+//$grid-width: 114rem;
+//$gutter-vertical: 4rem;
+//$gutter-vertical-small: 2rem;
+//$gutter-horizontal: 4rem;
+
+//FONT
+$default-font-size: 1.6rem;
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TTLakes-Regular"),
+    url("../../fonts/TTLakes/TTLakes-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: local("TTLakes-Bold"),
+    url("../../fonts/TTLakes/TTLakes-Bold.woff") format("woff");
+}
