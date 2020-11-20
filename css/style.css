@@ -6,11 +6,25 @@
   background-color: white;
   justify-content: space-between; }
   .header__icon {
+    border: none;
     position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #FF3E79; }
+    background-color: #FF3E79;
+    cursor: pointer; }
+    .header__icon-menu {
+      background-image: url("../../img/menu.svg"); }
+    .header__icon-phone {
+      background-image: url("../../img/phone.svg"); }
+    .header__icon-chat {
+      background-image: url("../../img/chat.svg"); }
+    .header__icon-profile {
+      background-image: url("../../img/profile.svg"); }
+    .header__icon-service {
+      background-image: url("../../img/service.svg"); }
+    .header__icon_checkstatus {
+      background-image: url("../../img/checkstatus.svg"); }
     .header__icon img {
       position: absolute;
       left: 50%;
