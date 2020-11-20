@@ -31,20 +31,6 @@ $color-bg-dark: #5643fa;
 //$gutter-horizontal: 4rem;
 
 //FONT
-$default-font-size: 1.6rem;
+$default-font-size: 16px;
 
-@font-face {
-    font-family: "TT Lakes";
-    font-style: normal;
-    font-weight: 400;
-    src: local("TTLakes-Regular"),
-    url("../../fonts/TTLakes/TTLakes-Regular.woff") format("woff");
-}
 
-@font-face {
-    font-family: "TT Lakes-Bold";
-    font-style: normal;
-    font-weight: 700;
-    src: local("TTLakes-Bold"),
-    url("../../fonts/TTLakes/TTLakes-Bold.woff") format("woff");
-}

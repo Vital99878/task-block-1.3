@@ -1,103 +1,119 @@
 @import "abstracts/variables";
-@import "layout/flex";
 @import "components/header";
+@import "components/content";
 @import "components/tabs";
-@import "layout/screen-size";
-
-
+@import "layout/flex";
 
 body {
     font-family: "TT Lakes";
-}
-
-html {
-    font-size: 62.5%;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-bg-main;
-
-}
-
-.header {
-    font-size: $default-font-size;
-
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 3.2rem;
-    font-family: "TT Lakes";
-
-
-    .column-left {
-        padding: 1.6rem;
+    main {
         display: flex;
         flex-direction: column;
-        align-items: self-start;
-        //background-color: #7ed56f;
-        &__text {
-            color: $color-text-content;
+        background-color: $color-bg-main;
 
-            font-size: 1.4rem;
-            font-weight: 100;
-            letter-spacing: 0.2px;
-
-            &-hidden {
-                display: block;
-            }
-        }
-        &__more {
-            margin-left: 1rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            cursor: pointer;
-
-            img {
-                height: 1.6rem;
-                margin-right: 1rem;
-            }
-        }
-        &__button {
-            font-size: 1.6rem;
-            font-weight: bold;
-            outline: none;
-            background-color: $color-bg-main;
-            border: none;
-            cursor: pointer;
-
-        }
     }
-    .column-left, .column-right {
-        width: 50%;
-    }
-
 }
 
-.page-header {
-    &__header {
-        font-size: 2.8rem;
-    }
-    display: flex;
-    flex-direction: row;
 
-    &__highlight {
-        margin-right: 12px;
+@media (min-width: 1121px) {
+
+    body {
+        width: 1120px;
+        margin: 15px  auto;
+
     }
 
-    &__header {
-        font-size: 2.8rem;
+    .header {
+        background-color: $color-bg-main;
+    }
+    main .page-header {
+        display: none;
+    }
+    .block_1 {
+        display: none;
+    }
+
+    .block_2 {
+        display: flex;
+    }
+    .block_2 .span-icon {
+        display: flex;
+        align-items: center;
+    }
+    .block_2 > div:nth-child(5):before {
+        content: "Оставить заявку";
+        margin-right: 10px;
         font-weight: bold;
     }
+    .block_2 > div:nth-child(6):before {
+        content: "Статус ремонта";
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    .block_2 > .header__icon, .block_2 > img {
+
+        display: none;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        //background-color: #333333;
+        overflow-x: visible;
+    }
 }
 
+@media (max-width: 1120px) {
+    .header {
+        background-color: $color-bg-nav;
+    }
+    .header .page-header {
+        display: none;
+    }
+    main .page-header {
+        display: flex;
+    }
 
-@media (max-width: 320px) {
+    .block_2 > .header__icon, .block_2 > img {
+        display: flex;
+    }
+
+    .block_1, .block_2 {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .block_1 > img {
+        //border: 1px solid #333333;
+        order: 2;
+    }
+    .block_1 img ~ img {
+        //border: 1px solid red;
+        order: 1;
+    }
+
+    .block_2 > div:nth-child(5):before, .block_2 > div:nth-child(6):before {
+        content: "";
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    header .page-header {
+        display: none;
+    }
+
+    .block_2 > .header__icon, .block_2 > img {
+        display: none;
+    }
+
+    .block_1 img:nth-child(2) {
+        order: 0;
+    }
+
+    .tabs {
+        overflow-x: scroll;
+    }
     .content {
         flex-direction: column;
 
@@ -114,3 +130,5 @@ main {
         }
     }
 }
+
+
