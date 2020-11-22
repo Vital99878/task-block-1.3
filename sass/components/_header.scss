@@ -19,20 +19,41 @@
         &-menu {
             background-image: url("../../img/menu.svg");
         }
+
         &-phone {
             background-image: url("../../img/phone.svg");
         }
+
         &-chat {
             background-image: url("../../img/chat.svg");
         }
+
         &-profile {
             background-image: url("../../img/profile.svg");
         }
+
         &-service {
+            position: relative;
+            font-size: 16px;
             background-image: url("../../img/service.svg");
+
+            span {
+                position: absolute;
+                left: -150px;
+                bottom: 5px;
+            }
         }
-        &_checkstatus {
+
+        &-checkstatus {
+            position: relative;
+            font-size: 16px;
             background-image: url("../../img/checkstatus.svg");
+
+            span {
+                position: absolute;
+                left: -150px;
+                bottom: 5px;
+            }
         }
 
         img {
@@ -43,28 +64,17 @@
         }
     }
 
-
-
     &__divider {
         height: 10%;
     }
 }
 
 .page-header {
-    &__header {
-        font-size: 28px;
-    }
-    display: flex;
-    flex-direction: row;
-
-    &__highlight {
-        margin-right: 12px;
-    }
-
-    &__header {
-        font-size: 28px;
-        font-weight: bold;
-    }
+    display: inline-block;
+    background: url("../../img/highlight.svg") no-repeat;
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 30px;
 }
 
 .block_1 {
@@ -87,6 +97,10 @@
 
     > * {
         margin-right: 20px;
+    }
+
+    span {
+        font-size: 0;
     }
 }
 

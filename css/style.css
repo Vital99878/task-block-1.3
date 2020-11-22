@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .header {
   padding: 24px 16px;
   display: flex;
@@ -22,9 +21,21 @@
     .header__icon-profile {
       background-image: url("../../img/profile.svg"); }
     .header__icon-service {
+      position: relative;
+      font-size: 16px;
       background-image: url("../../img/service.svg"); }
-    .header__icon_checkstatus {
+      .header__icon-service span {
+        position: absolute;
+        left: -150px;
+        bottom: 5px; }
+    .header__icon-checkstatus {
+      position: relative;
+      font-size: 16px;
       background-image: url("../../img/checkstatus.svg"); }
+      .header__icon-checkstatus span {
+        position: absolute;
+        left: -150px;
+        bottom: 5px; }
     .header__icon img {
       position: absolute;
       left: 50%;
@@ -34,15 +45,11 @@
     height: 10%; }
 
 .page-header {
-  display: flex;
-  flex-direction: row; }
-  .page-header__header {
-    font-size: 28px; }
-  .page-header__highlight {
-    margin-right: 12px; }
-  .page-header__header {
-    font-size: 28px;
-    font-weight: bold; }
+  display: inline-block;
+  background: url("../../img/highlight.svg") no-repeat;
+  font-size: 28px;
+  font-weight: bold;
+  padding-left: 30px; }
 
 .block_1 {
   display: flex;
@@ -57,6 +64,8 @@
   align-items: center; }
   .block_2 > * {
     margin-right: 20px; }
+  .block_2 span {
+    font-size: 0; }
 
 .content {
   display: flex;
@@ -145,28 +154,23 @@ body {
 @media (min-width: 1121px) {
   body {
     width: 1120px;
-    margin: 15px  auto; }
+    margin: 15px auto; }
   .header {
-    background-color: #F8F8F8; }
+    background-color: #F8F8F8;
+    margin-left: -16px; }
   main .page-header {
     display: none; }
   .block_1 {
     display: none; }
   .block_2 {
     display: flex; }
-  .block_2 .span-icon {
-    display: flex;
-    align-items: center; }
-  .block_2 > div:nth-child(5):before {
-    content: "Оставить заявку";
-    margin-right: 10px;
-    font-weight: bold; }
-  .block_2 > div:nth-child(6):before {
-    content: "Статус ремонта";
-    margin-right: 10px;
-    font-weight: bold; }
-  .block_2 > .header__icon, .block_2 > img {
+  .block_2 .header__icon:nth-child(1),
+  .block_2 .header__icon:nth-child(2),
+  .block_2 .header__icon:nth-child(3),
+  .block_2 img {
     display: none; }
+  .block_2 span {
+    font-size: 16px; }
   .tabs {
     flex-wrap: wrap;
     overflow-x: visible; } }
@@ -178,7 +182,7 @@ body {
     display: none; }
   main .page-header {
     display: flex; }
-  .block_2 > .header__icon, .block_2 > img {
+  .block_2 {
     display: flex; }
   .block_1, .block_2 {
     display: flex;
@@ -186,14 +190,12 @@ body {
   .block_1 > img {
     order: 2; }
   .block_1 img ~ img {
-    order: 1; }
-  .block_2 > div:nth-child(5):before, .block_2 > div:nth-child(6):before {
-    content: ""; } }
+    order: 1; } }
 
 @media (min-width: 320px) and (max-width: 768px) {
   header .page-header {
     display: none; }
-  .block_2 > .header__icon, .block_2 > img {
+  .block_2 .header__icon:nth-child(n+3), .block_2 img {
     display: none; }
   .block_1 img:nth-child(2) {
     order: 0; }
