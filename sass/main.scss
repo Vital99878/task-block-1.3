@@ -46,7 +46,18 @@ body {
         display: none;
     }
 
-    .block_2 span {
+    .block_2 .header__icon:nth-child(5), .block_2 .header__icon:nth-child(6) {
+        width: 250px;
+        height: 45px;
+        background-position: 80% 50%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        padding-right: 60px;
+    }
+
+
+    .block_2 button {
         font-size: 16px;
     }
 

@@ -6,7 +6,6 @@
   justify-content: space-between; }
   .header__icon {
     border: none;
-    position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -21,21 +20,11 @@
     .header__icon-profile {
       background-image: url("../../img/profile.svg"); }
     .header__icon-service {
-      position: relative;
-      font-size: 16px;
-      background-image: url("../../img/service.svg"); }
-      .header__icon-service span {
-        position: absolute;
-        left: -150px;
-        bottom: 5px; }
+      font-size: 0;
+      background: url("../../img/service.svg") no-repeat; }
     .header__icon-checkstatus {
-      position: relative;
-      font-size: 16px;
-      background-image: url("../../img/checkstatus.svg"); }
-      .header__icon-checkstatus span {
-        position: absolute;
-        left: -150px;
-        bottom: 5px; }
+      font-size: 0;
+      background: url("../../img/checkstatus.svg") no-repeat; }
     .header__icon img {
       position: absolute;
       left: 50%;
@@ -61,11 +50,13 @@
 .block_2 {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  font-size: 0; }
   .block_2 > * {
     margin-right: 20px; }
-  .block_2 span {
-    font-size: 0; }
+  .block_2 button {
+    font-size: 0;
+    white-space: nowrap; }
 
 .content {
   display: flex;
@@ -169,7 +160,15 @@ body {
   .block_2 .header__icon:nth-child(3),
   .block_2 img {
     display: none; }
-  .block_2 span {
+  .block_2 .header__icon:nth-child(5), .block_2 .header__icon:nth-child(6) {
+    width: 250px;
+    height: 45px;
+    background-position: 80% 50%;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    padding-right: 60px; }
+  .block_2 button {
     font-size: 16px; }
   .tabs {
     flex-wrap: wrap;
