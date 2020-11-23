@@ -1,32 +1,27 @@
 @import "../abstracts/variables";
 
-
-
 .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    font-family: "TT Lakes";
     .column-left {
         padding: 16px;
         display: flex;
         flex-direction: column;
         align-items: self-start;
         text-align: left;
-
-        //background-color: #7ed56f;
         &__text {
             color: $color-text-content;
             font-size: 14px;
             letter-spacing: 0.2px;
+
             &-hidden {
                 display: block;
             }
         }
         &__more {
             font-size: 16px;
-            margin-left: 10px;
+            margin: 16px 0;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -44,11 +39,9 @@
             background-color: $color-bg-main;
             border: none;
             cursor: pointer;
-
         }
     }
     .column-left, .column-right {
         width: 50%;
     }
-
 }
