@@ -1,8 +1,6 @@
-@import "abstracts/variables";
 @import "components/header";
 @import "components/content";
 @import "components/tabs";
-@import "layout/flex";
 
 *,
 *::after,
@@ -13,8 +11,9 @@
 }
 
 body {
+    font-family: "TT Lakes-Regular", serif;
+    font-weight: 400;
     box-sizing: border-box;
-    font-family: "TT Lakes";
 
     main {
         display: flex;
@@ -127,8 +126,7 @@ body {
 
         .column-left {
             width: 100%;
-
-            &__text-hidden {
+             &__text-hidden {
                 display: none;
             }
         }

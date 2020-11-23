@@ -1,4 +1,9 @@
 # Default ignored files
-/node_modules/*
 /.idea/*
-README.md
+/node_modules/*
+/sass/*
+
+.gitignore
+package.json
+package-lock.jsonREADME.md
+scratches.md

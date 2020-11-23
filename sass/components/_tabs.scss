@@ -5,21 +5,17 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
-    margin: 0 36px;
+    padding-left: 36px;
     overflow-x: hidden;
+    //background-color: #7E7E82;
 
     &__tab {
         white-space: nowrap;
         text-decoration: none;
         align-items: center;
         color: $color-text-tab;
-        font-family: TT Lakes;
         font-size: 16px;
-        padding: 10px 14px;
-    }
-
-    &__tab:not(:first-child) {
-        margin-left: 24px;
+        padding: 12px 16px;
     }
 
     &__tab-selected {
