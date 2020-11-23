@@ -4,7 +4,7 @@
 
 *,
 *::after,
-*:before  {
+*:before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -24,12 +24,16 @@ body {
 
 @media (min-width: 1121px) {
     body {
+        background-color: #F8F8F8;
         width: 1120px;
         margin: 0 auto;
     }
 
     .header {
+        padding: 0;
+        text-align: end;
         background-color: $color-bg-main;
+        //background-color: greenyellow;
         //margin-left: -16px;
 
     }
@@ -42,6 +46,9 @@ body {
 
     .icons {
         display: flex;
+        justify-content: flex-end;
+        //background-color: #7E7E82;
+
     }
     .icons .header__icon:nth-child(1),
     .icons .header__icon:nth-child(2),
@@ -51,9 +58,8 @@ body {
     }
 
     .icons .header__icon:nth-child(5), .icons .header__icon:nth-child(6) {
-        width: 250px;
-        height: 70px;
-        background-position: 80% 50%;
+        width: 200px;
+        background-position: 100% 50%;
         font-size: 16px;
         font-weight: 500;
         color: black;
@@ -102,6 +108,10 @@ body {
         order: 1;
     }
 
+    .tabs {
+        margin-bottom: 16px;
+    }
+
 
 }
 
@@ -119,14 +129,25 @@ body {
     }
 
     .tabs {
+        padding: 6px 16px;
         overflow-x: scroll;
     }
+
+    main {
+        .page-header {
+            padding: 6px 16px;
+            background-position: 0 50%;
+        }
+    }
     .content {
+
         flex-direction: column;
 
         .column-left {
+            padding: 6px 16px;
             width: 100%;
-             &__text-hidden {
+
+            &__text-hidden {
                 display: none;
             }
         }
