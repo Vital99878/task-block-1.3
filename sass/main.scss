@@ -14,11 +14,13 @@ body {
     font-family: "TT Lakes-Regular", serif;
     font-weight: 400;
     box-sizing: border-box;
+    background-color: $color-bg-main;
 
     main {
         display: flex;
         flex-direction: column;
         background-color: $color-bg-main;
+        border-top: 1px solid $color-main-top-line;
     }
 }
 
@@ -47,8 +49,6 @@ body {
     .icons {
         display: flex;
         justify-content: flex-end;
-        //background-color: #7E7E82;
-
     }
     .icons .header__icon:nth-child(1),
     .icons .header__icon:nth-child(2),
@@ -57,13 +57,12 @@ body {
         display: none;
     }
 
-    .icons .header__icon:nth-child(5), .icons .header__icon:nth-child(6) {
-        width: 200px;
+    .icons .header__icon:nth-child(4), .icons .header__icon:nth-child(5) {
         background-position: 100% 50%;
         font-size: 16px;
         font-weight: 500;
         color: black;
-        padding-right: 60px;
+        padding-right: 175px;
     }
 
     .icons button {
@@ -120,6 +119,12 @@ body {
         display: none;
     }
 
+    .header .logo {
+        padding-left: 16px;
+        padding-right: 0;
+        background: url("../img/divider.svg") 0 50% no-repeat;
+    }
+
     .icons .header__icon:nth-child(n+3), .icons img {
         display: none;
     }
@@ -140,9 +145,7 @@ body {
         }
     }
     .content {
-
         flex-direction: column;
-
         .column-left {
             padding: 6px 16px;
             width: 100%;
@@ -151,7 +154,6 @@ body {
                 display: none;
             }
         }
-
         .column-right {
             width: 100%;
         }

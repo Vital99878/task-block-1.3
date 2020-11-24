@@ -7,6 +7,11 @@
     background-color: $color-bg-nav;
     justify-content: space-between;
 
+    .logo {
+        padding-right: 20px;
+        background: url("../../img/divider.svg") 100% 50% no-repeat;
+    }
+
     &__icon {
         border: none;
         width: 40px;
@@ -17,20 +22,31 @@
         &-menu {
             background-image: url("../../img/menu.svg");
         }
+
         &-phone {
             background-image: url("../../img/phone.svg");
         }
+
         &-chat {
             background-image: url("../../img/chat.svg");
         }
+
         &-profile {
-            background-image: url("../../img/profile.svg");
+
+            padding-right: 56px;
+            background: url("../../img/profile.svg") no-repeat, url("../img/divider.svg") 100% 50% no-repeat;
         }
+
         &-service {
+            font-family: "TT Lakes-Regular", serif;
+            font-weight: 500;
             font-size: 0;
             background: url("../../img/service.svg") no-repeat;
         }
+
         &-checkstatus {
+            font-family: "TT Lakes-Regular", serif;
+            font-weight: 500;
             font-size: 0;
             background: url("../../img/checkstatus.svg") no-repeat;
         }
@@ -78,7 +94,7 @@
 
     //background-color: #7ed56f;
 
-    > *:not(:last-child){
+    > *:not(:last-child) {
         margin-right: 16px;
     }
 
