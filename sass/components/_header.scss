@@ -1,7 +1,7 @@
 @import "../abstracts/variables";
 
 .header {
-    padding: 36px 16px;
+    padding: 19px 16px;
     display: flex;
     flex-direction: row;
     background-color: $color-bg-nav;
@@ -14,8 +14,10 @@
 
     &__icon {
         border: none;
-        width: 40px;
+        //width: 40px;
         height: 40px;
+        padding-right: 40px;
+        //background-color: green;
         background-color: transparent;
         cursor: pointer;
 
@@ -32,40 +34,30 @@
         }
 
         &-profile {
-
             padding-right: 56px;
-            background: url("../../img/profile.svg") no-repeat, url("../img/divider.svg") 100% 50% no-repeat;
+            background: url("../../img/profile.svg") no-repeat, url("../../img/divider.svg") 100% 50% no-repeat;
         }
 
         &-service {
-            font-family: "TT Lakes-Regular", serif;
+            font-family: "TT Lakes", serif;
             font-weight: 500;
             font-size: 0;
             background: url("../../img/service.svg") no-repeat;
         }
 
         &-checkstatus {
-            font-family: "TT Lakes-Regular", serif;
+            font-family: "TT Lakes", serif;
             font-weight: 500;
             font-size: 0;
             background: url("../../img/checkstatus.svg") no-repeat;
         }
 
-        img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
 
-    &__divider {
-        height: 10%;
     }
 }
 
 .page-header {
-    font-family: "TT Lakes-Regular", serif;
+    font-family: "TT Lakes", serif;
     font-weight: 700;
     display: inline-block;
     background: url("../../img/highlight.svg") no-repeat;
@@ -92,8 +84,6 @@
     align-items: center;
     font-size: 0;
 
-    //background-color: #7ed56f;
-
     > *:not(:last-child) {
         margin-right: 16px;
     }
@@ -101,7 +91,6 @@
     button {
         font-size: 0;
         white-space: nowrap;
-
     }
 }
 

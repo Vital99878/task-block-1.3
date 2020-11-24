@@ -1,3 +1,4 @@
+@import "abstracts/typography";
 @import "components/header";
 @import "components/content";
 @import "components/tabs";
@@ -11,10 +12,11 @@
 }
 
 body {
-    font-family: "TT Lakes-Regular", serif;
+    font-family: "TT Lakes", serif;
     font-weight: 400;
     box-sizing: border-box;
     background-color: $color-bg-main;
+    margin: 0 auto;
 
     main {
         display: flex;
@@ -27,17 +29,14 @@ body {
 @media (min-width: 1121px) {
     body {
         background-color: #F8F8F8;
+        margin-top: 30px;
         width: 1120px;
-        margin: 0 auto;
     }
 
     .header {
         padding: 0;
         text-align: end;
         background-color: $color-bg-main;
-        //background-color: greenyellow;
-        //margin-left: -16px;
-
     }
     main .page-header {
         display: none;
@@ -62,7 +61,7 @@ body {
         font-size: 16px;
         font-weight: 500;
         color: black;
-        padding-right: 175px;
+        padding-right: 46px;
     }
 
     .icons button {
@@ -71,12 +70,7 @@ body {
 
     .tabs {
         flex-wrap: wrap;
-        //background-color: #333333;
         overflow-x: visible;
-
-        //&__tab:not(:last-child){
-        //    margin-left: 0;
-        //}
     }
 }
 
@@ -84,6 +78,13 @@ body {
     .header {
         background-color: $color-bg-nav;
     }
+
+    .header .logo {
+        padding-right: 0;
+        padding-left: 16px;
+        background: url("../img/divider.svg") 0 50% no-repeat;
+    }
+
     .header .page-header {
         display: none;
     }
@@ -100,13 +101,6 @@ body {
         justify-content: space-evenly;
     }
 
-    .menu > img {
-        order: 2;
-    }
-    .menu img ~ img {
-        order: 1;
-    }
-
     .tabs {
         margin-bottom: 16px;
     }
@@ -120,9 +114,9 @@ body {
     }
 
     .header .logo {
-        padding-left: 16px;
-        padding-right: 0;
-        background: url("../img/divider.svg") 0 50% no-repeat;
+        padding-left: 0;
+        padding-right: 16px;
+        background: url("../img/divider.svg") 100% 50% no-repeat;
     }
 
     .icons .header__icon:nth-child(n+3), .icons img {

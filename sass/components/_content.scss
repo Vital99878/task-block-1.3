@@ -21,10 +21,11 @@
         }
 
         button {
+            font-family: "TT Lakes",serif;
+            font-weight: 500;
             width: 170px;
             padding: 10px;
             font-size: 16px;
-            font-weight: 500;
             outline: none;
             background: url("../../img/more.svg") no-repeat  $color-bg-main 0 50% ;
             border: none;
