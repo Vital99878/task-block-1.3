@@ -185,8 +185,9 @@ body {
 @media (min-width: 1121px) {
   body {
     background-color: #F8F8F8;
-    width: 1120px;
-     }
+    width: 1120px; }
+    body main {
+      border-top: none; }
   .header {
     padding: 0;
     text-align: end;
