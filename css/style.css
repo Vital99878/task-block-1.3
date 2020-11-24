@@ -208,8 +208,11 @@ body main {
 @media (min-width: 1121px) {
   body {
     background-color: #F8F8F8;
-    margin-top: 30px;
     width: 1120px;
+  }
+
+  body main {
+    border-top: none;
   }
 
   .header {
