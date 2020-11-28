@@ -21,6 +21,10 @@
         background-color: transparent;
         cursor: pointer;
 
+        &--close-menu {
+            background-image: url("../../img/phone.svg");
+        }
+
         &-menu {
             background-image: url("../../img/menu.svg");
         }
@@ -80,7 +84,7 @@
 .icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    //justify-content: space-evenly;
     align-items: center;
     font-size: 0;
 
