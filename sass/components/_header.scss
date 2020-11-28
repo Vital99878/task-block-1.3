@@ -1,15 +1,23 @@
 @import "../abstracts/variables";
 
 .header {
-    padding: 19px 16px;
+
     display: flex;
     flex-direction: row;
     background-color: $color-bg-nav;
     justify-content: space-between;
 
+    &--p-main {
+        padding: 19px 24px;
+    }
+
     .logo {
         padding-right: 20px;
         background: url("../../img/divider.svg") 100% 50% no-repeat;
+
+        &--no-divider {
+            background: none;
+        }
     }
 
     &__icon {
@@ -22,7 +30,7 @@
         cursor: pointer;
 
         &--close-menu {
-            background-image: url("../../img/phone.svg");
+            background-image: url("../../img/burger-close.svg");
         }
 
         &-menu {
@@ -40,6 +48,11 @@
         &-profile {
             padding-right: 56px;
             background: url("../../img/profile.svg") no-repeat, url("../../img/divider.svg") 100% 50% no-repeat;
+        }
+
+        &__profile--no-divider {
+            padding-right: 56px;
+            background: url("../../img/profile.svg") no-repeat;
         }
 
         &-service {
@@ -66,8 +79,13 @@
     display: inline-block;
     background: url("../../img/highlight.svg") no-repeat;
     font-size: 28px;
-    padding-left: 36px;
+    padding-left: 16px;
     margin: 20px 0;
+
+    &--view-m {
+        margin-left: -24px;
+        padding-left: 20px;
+    }
 }
 
 .menu {
@@ -84,7 +102,6 @@
 .icons {
     display: flex;
     flex-direction: row;
-    //justify-content: space-evenly;
     align-items: center;
     font-size: 0;
 
