@@ -17,7 +17,8 @@
   display: flex;
   flex-direction: row;
   background-color: white;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   .header--p-main {
     padding: 19px 24px; }
   .header .logo {
@@ -78,7 +79,6 @@
 .icons {
   display: flex;
   flex-direction: row;
-  align-items: center;
   font-size: 0; }
   .icons > *:not(:last-child) {
     margin-right: 16px; }

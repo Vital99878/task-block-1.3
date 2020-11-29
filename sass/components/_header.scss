@@ -6,6 +6,7 @@
     flex-direction: row;
     background-color: $color-bg-nav;
     justify-content: space-between;
+    align-items: center;
 
     &--p-main {
         padding: 19px 24px;
@@ -102,7 +103,7 @@
 .icons {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    //align-items: center;
     font-size: 0;
 
     > *:not(:last-child) {
