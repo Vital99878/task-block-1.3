@@ -114,7 +114,8 @@ body {
 
 .modal-menu {
   max-width: 360px;
-  height: 1024px;
+  min-height: 768px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 19px 24px 32px 24px;
@@ -149,13 +150,25 @@ body {
 .contacts {
   margin-top: 16px; }
   .contacts__email {
+    display: block;
+    text-decoration: none;
+    color: #1B1C21;
+    font-size: 16px;
     font-weight: 500; }
   .contacts__phone {
+    display: block;
+    text-decoration: none;
+    color: #1B1C21;
+    font-weight: bold;
+    font-size: 24px;
     margin-top: 12px; }
 
 .lang-toggle {
   margin-top: 40px; }
-  .lang-toggle span {
-    margin-right: 7px; }
+  .lang-toggle button {
+    border: none;
+    background-color: transparent;
+    margin-right: 7px;
+    cursor: pointer; }
   .lang-toggle .active {
     color: #7E7E82; }
