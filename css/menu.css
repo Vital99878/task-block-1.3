@@ -43,6 +43,7 @@
   padding-right: 40px;
   background-color: transparent;
   cursor: pointer;
+  transition: all .4s;
 }
 
 .header__icon--close-menu {
@@ -83,6 +84,11 @@
   font-weight: 500;
   font-size: 0;
   background: url("../img/checkstatus.svg") no-repeat;
+}
+
+.header__icon:hover {
+  filter: hue-rotate(25deg);
+  transform: scale(1.05);
 }
 
 .page-header {
@@ -190,7 +196,7 @@ body {
 }
 
 .nav__link:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   opacity: 0.8;
 }
 

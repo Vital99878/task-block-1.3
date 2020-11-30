@@ -29,6 +29,7 @@
         //background-color: green;
         background-color: transparent;
         cursor: pointer;
+        transition: all .4s;
 
         &--close-menu {
             background-image: url("../../img/burger-close.svg");
@@ -70,7 +71,11 @@
             background: url("../../img/checkstatus.svg") no-repeat;
         }
 
+    }
 
+    &__icon:hover {
+        filter: hue-rotate(25deg);
+        transform: scale(1.05);
     }
 }
 
