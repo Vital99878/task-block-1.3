@@ -133,8 +133,14 @@
   box-sizing: inherit;
 }
 
-body {
+html {
   position: relative;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
   max-width: 768px;
   font-family: "TT Lakes", serif;
   font-size: 16px;
@@ -158,19 +164,21 @@ body {
   margin-bottom: auto;
 }
 
-.nav ul {
+.nav__list {
   list-style: none;
 }
 
-.nav ul a {
+.nav__link {
   display: block;
   text-decoration: none;
   font-weight: 500;
   color: #1B1C21;
   margin-bottom: 32px;
+  transform-origin: bottom left;
+  transition: all .4s;
 }
 
-.nav .active {
+.nav__link--active {
   height: 32px;
   background: url("../img/highlight.svg") 0 0 no-repeat;
   background-size: 4px 32px;
@@ -179,6 +187,11 @@ body {
   padding-left: 24px;
   margin-left: -24px;
   color: #7E7E82;
+}
+
+.nav__link:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
 .contacts {
