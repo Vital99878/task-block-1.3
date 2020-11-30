@@ -1,17 +1,17 @@
 @font-face {
   font-family: "TT Lakes";
   font-weight: normal;
-  src: url("../../fonts/TTLakes-Regular.woff"), url("../../fonts/TTLakes-Regular.eot"), url("../../fonts/TTLakes-Regular.ttf"); }
+  src: url("../fonts/TTLakes-Regular.woff"), url("../fonts/TTLakes-Regular.eot"), url("../fonts/TTLakes-Regular.ttf"); }
 
 @font-face {
   font-family: "TT Lakes";
   font-weight: 700;
-  src: url("../../fonts/TTLakes-Bold.woff"), url("../../fonts/TTLakes-Bold.eot"), url("../../fonts/TTLakes-Bold.ttf"); }
+  src: url("../fonts/TTLakes-Bold.woff"), url("../fonts/TTLakes-Bold.eot"), url("../fonts/TTLakes-Bold.ttf"); }
 
 @font-face {
   font-family: "TT Lakes";
   font-weight: 500;
-  src: url("../../fonts/TTLakes-Medium.woff"), url("../../fonts/TTLakes-Medium.eot"), url("../../fonts/TTLakes-Medium.ttf"); }
+  src: url("../fonts/TTLakes-Medium.woff"), url("../fonts/TTLakes-Medium.eot"), url("../fonts/TTLakes-Medium.ttf"); }
 
 .header {
   display: flex;
@@ -23,7 +23,7 @@
     padding: 19px 24px; }
   .header .logo {
     padding-right: 20px;
-    background: url("../../img/divider.svg") 100% 50% no-repeat; }
+    background: url("../img/divider.svg") 100% 50% no-repeat; }
     .header .logo--no-divider {
       background: none; }
   .header__icon {
@@ -31,37 +31,41 @@
     height: 40px;
     padding-right: 40px;
     background-color: transparent;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all .4s; }
     .header__icon--close-menu {
-      background-image: url("../../img/burger-close.svg"); }
+      background-image: url("../img/burger-close.svg"); }
     .header__icon-menu {
-      background-image: url("../../img/menu.svg"); }
+      background-image: url("../img/menu.svg"); }
     .header__icon-phone {
-      background-image: url("../../img/phone.svg"); }
+      background-image: url("../img/phone.svg"); }
     .header__icon-chat {
-      background-image: url("../../img/chat.svg"); }
+      background-image: url("../img/chat.svg"); }
     .header__icon-profile {
       padding-right: 56px;
-      background: url("../../img/profile.svg") no-repeat, url("../../img/divider.svg") 100% 50% no-repeat; }
+      background: url("../img/profile.svg") no-repeat, url("../img/divider.svg") 100% 50% no-repeat; }
     .header__icon__profile--no-divider {
       padding-right: 56px;
-      background: url("../../img/profile.svg") no-repeat; }
+      background: url("../img/profile.svg") no-repeat; }
     .header__icon-service {
       font-family: "TT Lakes", serif;
       font-weight: 500;
       font-size: 0;
-      background: url("../../img/service.svg") no-repeat; }
+      background: url("../img/service.svg") no-repeat; }
     .header__icon-checkstatus {
       font-family: "TT Lakes", serif;
       font-weight: 500;
       font-size: 0;
-      background: url("../../img/checkstatus.svg") no-repeat; }
+      background: url("../img/checkstatus.svg") no-repeat; }
+  .header__icon:hover {
+    filter: hue-rotate(25deg);
+    transform: scale(1.05); }
 
 .page-header {
   font-family: "TT Lakes", serif;
   font-weight: 700;
   display: inline-block;
-  background: url("../../img/highlight.svg") no-repeat;
+  background: url("../img/highlight.svg") no-repeat;
   font-size: 28px;
   padding-left: 16px;
   margin: 20px 0; }
@@ -109,7 +113,7 @@
       padding: 10px;
       font-size: 16px;
       outline: none;
-      background: url("../../img/more.svg") no-repeat #F8F8F8 0 50%;
+      background: url("../img/more.svg") no-repeat #F8F8F8 0 50%;
       border: none;
       cursor: pointer; }
     .content .column-left p:first-child {
