@@ -93,9 +93,6 @@
 
 @media (min-width: 320px) and (max-width: 574px) {
   .brands__cards {
-    display: flex;
-    flex-direction: row; }
+    display: block; }
     .brands__cards__card {
-      margin-left: 16px; }
-    .brands__cards__card:first-child {
-      margin-left: 0; } }
+      margin-left: 16px; } }
