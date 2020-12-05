@@ -119,12 +119,20 @@
 }
 
 @media (min-width: 320px) and (max-width: 574px) {
+
   .brands__cards {
-    display: block;
+    display: flex;
+    /*flex-direction: row;*/
+    width: 100%;
+    max-height: 1000px;
+    overflow: visible;
+
   }
 
-  .brands__cards__card {
-    margin-left: 16px;
+  .brands__card {
+    display: block;
+    height: 72px;
+    min-width: 280px;
   }
 }
 
