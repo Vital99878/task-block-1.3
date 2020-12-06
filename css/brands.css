@@ -1,35 +1,43 @@
 @font-face {
   font-family: "TT Lakes";
   font-weight: normal;
-  src: url("../../fonts/TTLakes-Regular.woff"), url("../../fonts/TTLakes-Regular.eot"), url("../../fonts/TTLakes-Regular.ttf"); }
+  src: url("../../fonts/TTLakes-Regular.woff"), url("../../fonts/TTLakes-Regular.eot"), url("../../fonts/TTLakes-Regular.ttf");
+}
 
 @font-face {
   font-family: "TT Lakes";
   font-weight: 700;
-  src: url("../../fonts/TTLakes-Bold.woff"), url("../../fonts/TTLakes-Bold.eot"), url("../../fonts/TTLakes-Bold.ttf"); }
+  src: url("../../fonts/TTLakes-Bold.woff"), url("../../fonts/TTLakes-Bold.eot"), url("../../fonts/TTLakes-Bold.ttf");
+}
 
 @font-face {
   font-family: "TT Lakes";
   font-weight: 500;
-  src: url("../../fonts/TTLakes-Medium.woff"), url("../../fonts/TTLakes-Medium.eot"), url("../../fonts/TTLakes-Medium.ttf"); }
+  src: url("../../fonts/TTLakes-Medium.woff"), url("../../fonts/TTLakes-Medium.eot"), url("../../fonts/TTLakes-Medium.ttf");
+}
 
 .title {
   padding: 16px;
   color: #7E7E82;
   text-transform: uppercase;
   background: linear-gradient(to right, #F2F2F2, #FFFFFF);
-  border-top: 1px solid #D9FFF5; }
+  border-top: 1px solid #D9FFF5;
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
   .title {
-    padding: 16px 24px; } }
+    padding: 16px 24px;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 1120px) {
   .title {
-    padding: 16px 32px; } }
+    padding: 16px 32px;
+  }
+}
 
 .more {
-  font-family: "TT Lakes",serif;
+  font-family: "TT Lakes", serif;
   font-weight: 500;
   width: 170px;
   margin-left: 32px;
@@ -38,61 +46,101 @@
   outline: none;
   background: url("../../img/more.svg") no-repeat transparent 0 50%;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 @media (min-width: 320px) and (max-width: 574px) {
   .more {
-    display: none; } }
+    display: none;
+  }
+}
 
 *,
 *::after,
 *:before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 .brands {
   display: flex;
   flex-direction: column;
-  background-color: #F2F2F2; }
-  .brands__cards {
-    max-height: 150px;
-    overflow-y: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 24px;
-    grid-row-gap: 16px;
-    padding: 24px;
-    transition: all 1s; }
-  .brands__card {
-    position: relative;
-    height: 72px;
-    min-width: 224px;
-    list-style: none;
-    margin-left: -3px;
-    background: url("../img/go.svg") no-repeat 93% 50% #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 6px; }
-    .brands__card--hide {
-      display: none; }
-    .brands__card img {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      transform: translateY(-50%); }
+  background-color: #F2F2F2;
+}
+
+.brands__cards {
+  max-height: 150px;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+  padding: 24px;
+  transition: all 1s;
+}
+
+.brands__card {
+  position: relative;
+  height: 72px;
+  min-width: 224px;
+  list-style: none;
+  margin-left: -3px;
+  background: url("../img/go.svg") no-repeat 93% 50% #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+}
+
+.brands__card--hide {
+  display: none;
+}
+
+.brands__card img {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
 
 @media (min-width: 1121px) {
   .brands__cards {
-    grid-template-columns: repeat(4, minmax(200px, 360px)); }
-    .brands__cards__card {
-      max-width: 260px; } }
+    grid-template-columns: repeat(4, minmax(200px, 360px));
+  }
+
+  .brands__cards__card {
+    max-width: 260px;
+  }
+}
 
 @media (min-width: 575px) and (max-width: 767px) {
   .brands__cards {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (min-width: 320px) and (max-width: 574px) {
+
   .brands__cards {
-    display: block; }
-    .brands__cards__card {
-      margin-left: 16px; } }
+    grid-template-columns: repeat(11, 1fr);;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    margin: 16px 0 0 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    max-height: 1600px;
+    overflow: visible;
+
+
+  }
+
+  .brands__card {
+    box-sizing: border-box;
+    display: block;
+    height: 72px;
+    padding: 0;
+    width: 90%;
+    margin-left: 16px;
+  }
+}
+
