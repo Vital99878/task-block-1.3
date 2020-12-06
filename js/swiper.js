@@ -1,33 +1,29 @@
 
 
-new Swiper('.brands', {
-
-//  navigation: {
-//    nextEl: '.swiper-button-next',
-//    prevEl: '.swiper-button-prev'
-//  },
-
+let swiper = new Swiper('.brands', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true
   }, scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true
-  },
-  breakpoint: {
-    320: {
-      slidesPerView : 1,
-    }
   }
-
 });
 
-//if (window.matchMedia("(min-width: 550px)").matches) {
-//  alert("destroy")
-//  console.log("destroy")
-//  Swiper.destroy(false, true)
-//}
+const mediaQuery = window.matchMedia('(min-width: 575px)');
 
+function handleTabletChange(e) {
+  // Check if the media query is true
+  if (e.matches) {
+
+    console.log('Media Query Matched!')
+//    swiper.destroy(true, true)
+  }
+}
+mediaQuery.addEventListener("change", handleTabletChange)
+
+
+handleTabletChange(mediaQuery)
 
 
 
