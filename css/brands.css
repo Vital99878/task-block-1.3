@@ -38,7 +38,7 @@
     background: url("../img/go.svg") no-repeat 93% 50% #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
-    max-width: 300px; }
+    max-width: 500px; }
   .brands__item img {
     position: absolute;
     top: 50%;
@@ -58,6 +58,9 @@
   background: #B5B6BC; }
 
 @media (min-width: 576px) {
+  .swiper-wrapper, .swiper-container {
+    all: unset;
+    display: grid; }
   .brands__list {
     padding: 24px;
     display: grid;
