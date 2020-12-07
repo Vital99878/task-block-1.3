@@ -1,7 +1,6 @@
-
 let more_btn = document.querySelector('.more');
-let hidden_card = document.querySelector('.brands__card:nth-child(8)');
-let cards = document.querySelector('.brands__cards');
+let hidden_card = document.querySelector('.brands__item:nth-child(8)');
+let cards = document.querySelector('.brands__list');
 
 
 more_btn.addEventListener('click', function ( ) {
@@ -18,3 +17,24 @@ more_btn.addEventListener('click', function ( ) {
   }
 })
 
+
+
+const mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+//  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+})
+
+if(window.innerWidth >= 577) {
+  mySwiper.destroy();
+  console.log("destroy")
+}
