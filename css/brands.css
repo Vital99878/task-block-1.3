@@ -20,6 +20,9 @@
   padding: 0;
   box-sizing: inherit; }
 
+body {
+  background-color: #F2F2F2; }
+
 .title {
   padding: 16px 24px;
   color: #7E7E82;
@@ -57,10 +60,16 @@
 .swiper-pagination-bullet-active {
   background: #B5B6BC; }
 
+@media (max-width: 575px) {
+  .swiper-wrapper {
+    margin-top: 16px; } }
+
 @media (min-width: 576px) {
   .swiper-wrapper, .swiper-container {
     all: unset;
     display: grid; }
+  .swiper-pagination {
+    display: none; }
   .brands__list {
     padding: 24px;
     display: grid;
