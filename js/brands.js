@@ -34,7 +34,7 @@ const mySwiper = new Swiper('.swiper-container', {
   },
 })
 
-if(window.innerWidth >= 577) {
-  mySwiper.destroy();
+if(window.innerWidth >= 576) {
+  mySwiper.destroy(false, false);
   console.log("destroy")
 }
