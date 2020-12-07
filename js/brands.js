@@ -17,8 +17,6 @@ more_btn.addEventListener('click', function ( ) {
   }
 })
 
-
-
 const mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
 //  loop: true,
@@ -26,6 +24,7 @@ const mySwiper = new Swiper('.swiper-container', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    click: true
   },
 
   // And if we need scrollbar
