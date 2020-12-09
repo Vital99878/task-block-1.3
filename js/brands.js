@@ -20,12 +20,15 @@ const mySwiper = new Swiper('.swiper-container', {
 
   pagination: {
     el: '.swiper-pagination',
-    click: true
+    clickable: true,
   },
 
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+  spaceBetween: 16,
+  slidesPerView: 1.3
+
 //  spaceBetween: 30
 })
 
