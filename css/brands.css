@@ -36,16 +36,29 @@
       padding: 16px 24px; } }
 
 .more {
-  font-family: "TT Lakes",serif;
+  position: relative;
+  font-family: "TT Lakes", serif;
   font-weight: 500;
   width: 170px;
   margin-left: 32px;
   padding-left: 6px;
   font-size: 16px;
   outline: none;
-  background: url("../img/more.svg") no-repeat transparent 0 50%;
   border: none;
   cursor: pointer; }
+
+.more::before {
+  top: 50%;
+  left: 0;
+  position: absolute;
+  content: '';
+  height: 11px;
+  width: 8px;
+  background: url("../img/more.svg") no-repeat transparent;
+  transform: translateY(-50%); }
+
+.more.rotate::before {
+  transform: translateY(-50%) rotate(180deg); }
 
 @media (min-width: 320px) and (max-width: 574px) {
   .more {
