@@ -1,5 +1,5 @@
 let more_btn = document.querySelector('.more');
-let cards = document.querySelector('.brands__list');
+let cards = document.querySelector('.service__list');
 
 
 more_btn.addEventListener('click', function ( ) {
