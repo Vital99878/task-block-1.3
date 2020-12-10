@@ -2,6 +2,8 @@
 @import "components/header";
 @import "components/content";
 @import "components/tabs";
+@import "components/more";
+@import "brands";
 
 *,
 *::after,
@@ -25,11 +27,90 @@ body {
         border-top: 1px solid $color-main-top-line;
     }
 }
+@media (min-width: 320px) and (max-width: 768px) {
+    header .page-header {
+        display: none;
+    }
 
-@media (min-width: 1121px) {
+    .header .logo {
+        padding-left: 0;
+        padding-right: 16px;
+        background: url("../img/divider.svg") 100% 50% no-repeat;
+    }
+
+    .icons .header__icon:nth-child(n+3), .icons img {
+        display: none;
+    }
+
+    .menu img:nth-child(2) {
+        order: 0;
+    }
+
+    .tabs {
+        padding: 6px 16px;
+        overflow-x: scroll;
+    }
+
+    main {
+        .page-header {
+            padding: 6px 16px;
+            background-position: 0 50%;
+        }
+    }
+    .content {
+        flex-direction: column;
+        .column-left {
+            padding: 6px 16px;
+            width: 100%;
+
+            &__text-hidden {
+                display: none;
+            }
+        }
+        .column-right {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1119px) {
+    .header {
+        background-color: $color-bg-nav;
+    }
+
+    .header .logo {
+        padding-right: 0;
+        padding-left: 16px;
+        background: url("../img/divider.svg") 0 50% no-repeat;
+    }
+
+    .header .page-header {
+        display: none;
+    }
+    main .page-header {
+        display: flex;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .menu, .icons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .tabs {
+        margin-bottom: 16px;
+    }
+
+
+}
+
+@media (min-width: 1120px) {
     body {
         background-color: #F8F8F8;
-        margin-top: 30px;
+        margin: 30px auto;
         width: 1120px;
         main {
             border-top: none;
@@ -78,85 +159,9 @@ body {
     }
 }
 
-@media (max-width: 1120px) {
-    .header {
-        background-color: $color-bg-nav;
-    }
-
-    .header .logo {
-        padding-right: 0;
-        padding-left: 16px;
-        background: url("../img/divider.svg") 0 50% no-repeat;
-    }
-
-    .header .page-header {
-        display: none;
-    }
-    main .page-header {
-        display: flex;
-    }
-
-    .icons {
-        display: flex;
-    }
-
-    .menu, .icons {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .tabs {
-        margin-bottom: 16px;
-    }
 
 
-}
 
-@media (min-width: 320px) and (max-width: 768px) {
-    header .page-header {
-        display: none;
-    }
-
-    .header .logo {
-        padding-left: 0;
-        padding-right: 16px;
-        background: url("../img/divider.svg") 100% 50% no-repeat;
-    }
-
-    .icons .header__icon:nth-child(n+3), .icons img {
-        display: none;
-    }
-
-    .menu img:nth-child(2) {
-        order: 0;
-    }
-
-    .tabs {
-        padding: 6px 16px;
-        overflow-x: scroll;
-    }
-
-    main {
-        .page-header {
-            padding: 6px 16px;
-            background-position: 0 50%;
-        }
-    }
-    .content {
-        flex-direction: column;
-        .column-left {
-            padding: 6px 16px;
-            width: 100%;
-
-            &__text-hidden {
-                display: none;
-            }
-        }
-        .column-right {
-            width: 100%;
-        }
-    }
-}
 
 
 
