@@ -1,0 +1,112 @@
+@import "abstracts/variables";
+@import "abstracts/typography";
+@import "components/header";
+
+
+*,
+*::after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 768px;
+    font-family: "TT Lakes", serif;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0 auto;
+
+
+}
+
+.modal-menu {
+    max-width: 360px;
+    min-height: 768px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 19px 24px 32px 24px;
+    box-shadow: 0 10px 20px 16px #F2F2F2;
+}
+
+.nav {
+    margin-top: 50px;
+    margin-bottom: auto;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-weight: 500;
+        color: #1B1C21;
+        margin-bottom: 32px;
+        transform-origin: bottom left;
+        transition: all .4s;
+
+        &--active {
+            height: 32px;
+            background: url("../img/highlight.svg") 0 0 no-repeat;
+            background-size: 4px 32px;
+            margin-bottom: 26px;
+            padding-top: 6px;
+            padding-left: 24px;
+            margin-left: -24px;
+            color: $menu-item-active;
+        }
+    }
+
+    &__link:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.contacts {
+    margin-top: 16px;
+
+    &__email {
+        display: block;
+        text-decoration: none;
+        color: $color-text-content;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__phone {
+        display: block;
+        text-decoration: none;
+        color: $color-text-content;
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 12px;
+    }
+}
+
+.lang-toggle {
+    margin-top: 40px;
+
+    button {
+        border: none;
+        background-color: transparent;
+        margin-right: 7px;
+        cursor: pointer;
+    }
+
+    .active {
+        color: $menu-item-active;
+    }
+}
