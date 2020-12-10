@@ -117,12 +117,13 @@ body {
 
 @media (max-width: 575px) {
   .swiper-container {
-    overflow: visible; }
+    position: relative;
+    overflow: visible;
+    padding-bottom: 16px; }
   .swiper-wrapper {
     margin-top: 16px; }
   .swiper-pagination {
-    top: 70px;
-    margin-top: 16px; }
+    top: 88px; }
   .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -134,8 +135,7 @@ body {
 
 @media (min-width: 576px) {
   .swiper-wrapper, .swiper-container {
-    all: unset;
-    display: grid; }
+    all: unset; }
   .swiper-pagination {
     display: none; }
   .service__list {
