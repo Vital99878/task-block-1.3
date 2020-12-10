@@ -50,7 +50,7 @@ const mySwiper = new Swiper('.swiper-container', {
     el: '.swiper-scrollbar',
   },
   spaceBetween: 16,
-  slidesPerView: 1.3
+  slidesPerView: 1.3,
 
 //  spaceBetween: 30
 })
