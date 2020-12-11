@@ -1,7 +1,21 @@
 @import "../abstracts/variables";
 
-.header {
+.page-header {
+    font-family: "TT Lakes", serif;
+    font-weight: 700;
+    display: inline-block;
+    background: url("../img/highlight.svg") no-repeat;
+    font-size: 28px;
+    padding-left: 32px;
+    margin: 20px 0;
 
+    &--view-m {
+        margin-left: -24px;
+        padding-left: 20px;
+    }
+}
+
+.header {
     display: flex;
     flex-direction: row;
     background-color: $color-bg-nav;
@@ -14,7 +28,7 @@
 
     .logo {
         padding-right: 20px;
-        background: url("../../img/divider.svg") 100% 50% no-repeat;
+        background: url("../img/divider.svg") 100% 50% no-repeat;
 
         &--no-divider {
             background: none;
@@ -30,43 +44,43 @@
         transition: all .4s;
 
         &--close-menu {
-            background-image: url("../../img/burger-close.svg");
+            background-image: url("../img/burger-close.svg");
         }
 
         &-menu {
-            background-image: url("../../img/menu.svg");
+            background-image: url("../img/menu.svg");
         }
 
         &-phone {
-            background-image: url("../../img/phone.svg");
+            background-image: url("../img/phone.svg");
         }
 
         &-chat {
-            background-image: url("../../img/chat.svg");
+            background-image: url("../img/chat.svg");
         }
 
         &-profile {
             padding-right: 56px;
-            background: url("../../img/profile.svg") no-repeat, url("../../img/divider.svg") 100% 50% no-repeat;
+            background: url("../img/profile.svg") no-repeat, url("../img/divider.svg") 100% 50% no-repeat;
         }
 
         &__profile--no-divider {
             padding-right: 56px;
-            background: url("../../img/profile.svg") no-repeat;
+            background: url("../img/profile.svg") no-repeat;
         }
 
         &-service {
             font-family: "TT Lakes", serif;
             font-weight: 500;
             font-size: 0;
-            background: url("../../img/service.svg") no-repeat;
+            background: url("../img/service.svg") no-repeat;
         }
 
         &-checkstatus {
             font-family: "TT Lakes", serif;
             font-weight: 500;
             font-size: 0;
-            background: url("../../img/checkstatus.svg") no-repeat;
+            background: url("../img/checkstatus.svg") no-repeat;
         }
 
     }
@@ -74,21 +88,6 @@
     &__icon:hover {
         filter: hue-rotate(25deg);
         transform: scale(1.05);
-    }
-}
-
-.page-header {
-    font-family: "TT Lakes", serif;
-    font-weight: 700;
-    display: inline-block;
-    background: url("../../img/highlight.svg") no-repeat;
-    font-size: 28px;
-    padding-left: 16px;
-    margin: 20px 0;
-
-    &--view-m {
-        margin-left: -24px;
-        padding-left: 20px;
     }
 }
 
@@ -106,7 +105,6 @@
 .icons {
     display: flex;
     flex-direction: row;
-    //align-items: center;
     font-size: 0;
 
     > *:not(:last-child) {
@@ -118,10 +116,6 @@
         white-space: nowrap;
     }
 }
-
-
-
-
 
 
 

@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link href="css/style.css" rel="stylesheet">
     <title>Service: block1.3</title>
     <meta charset="UTF-8">
@@ -21,8 +22,8 @@
     </div>
 
     <div class="icons">
-        <button class="header__icon header__icon-phone "></button>
-        <button class="header__icon header__icon-chat "></button>
+        <button class="header__icon header__icon-phone"></button>
+        <button class="header__icon header__icon-chat"></button>
         <button class="header__icon header__icon-profile "></button>
         <button class="header__icon header__icon-service">Оставить заявку</button>
         <button class="header__icon header__icon-checkstatus">Статус ремонта</button>
@@ -48,13 +49,62 @@
             <p class="column-left__text column-left__text-hidden">Мы успешно работаем с 1992 года и заслужили репутацию
                 надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам
                 обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-            <a href="./pages/brands.html"><button class="more" type="button">Читать далее</button></a>
+
+            <button class="more" type="button">Читать далее</button>
+
         </div>
         <img class="column-right" src="img/right.jpg" alt="CPS">
     </div>
+
+    <section class="service">
+        <h2 class="service__title">Ремонт техники различных брендов</h2>
+
+        <div class="swiper-container">
+            <ul class="swiper-wrapper service__list service__list--brands">
+                <li class="swiper-slide service__brand"><a href=""><img src="img/lenovo.svg" alt="Lenovo"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/samsung.svg" alt="Samsung"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/apple.svg" alt="Apple"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/viewsonic.svg" alt="Viewsonic"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/bosh.svg" alt="Bosh"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/hp.svg" alt="HP"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/sony.svg" alt="Sony"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/bosh.svg" alt="Bosh"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/lenovo.svg" alt="Lenovo"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/samsung.svg" alt="Samsung"></a></li>
+                <li class="swiper-slide service__brand"><a href=""><img src="img/apple.svg" alt="Apple"></a></li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <button class="more more--brands more--ml-32" type="button">Показать все</button>
+    </section>
+
+    <section class="service">
+        <h2 class="service__title">Ремонт различных видов техники</h2>
+        <div class="swiper-container">
+            <ul class="swiper-wrapper service__list service__list--technics">
+                <li class="swiper-slide service__technic"><a href="">Ремонт ноутбуков</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт планшетов</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт ПК</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт  мониторов</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт телефонов</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт ноутбуков</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт планшетов</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт ПК</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт  мониторов</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт телефонов</a></li>
+                <li class="swiper-slide service__technic"><a href="">Ремонт ноутбуков</a></li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <button class="more more--technics more--ml-32" type="button">Показать все</button>
+    </section>
 </main>
 
 
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="js/brands.js"></script>
 
 </body>
 </html>

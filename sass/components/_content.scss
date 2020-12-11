@@ -1,5 +1,4 @@
 @import "../abstracts/variables";
-@import "../components/more";
 
 .content {
     display: flex;
@@ -15,14 +14,10 @@
             color: $color-text-content;
             font-size: 14px;
             letter-spacing: 0.2px;
-
+            margin-bottom: 16px;
             &-hidden {
                 display: block;
             }
-        }
-
-        p:first-child {
-            margin-bottom: 30px;
         }
     }
     .column-left, .column-right {

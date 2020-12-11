@@ -1,39 +1,65 @@
+let more_btn__brands = document.querySelector('.more--brands');
+let more_btn__technics = document.querySelector('.more--technics');
+let list_brands = document.querySelector('.service__list--brands');
+let list_technics = document.querySelector('.service__list--technics');
 
-let more_btn = document.querySelector('.more');
-let hidden_card = document.querySelector('.brands__card:nth-child(8)');
-let cards = document.querySelector('.brands__list');
 
-more_btn.addEventListener('click', function ( ) {
-  let text = more_btn.textContent;
+more_btn__brands.addEventListener('click', function (evt ) {
+  console.log(evt.target)
+  let text = more_btn__brands.textContent;
+
   if (text === "Показать все") {
-    more_btn.textContent = "Скрыть";
-    more_btn.style.backgroundImage = "url('../img/hide-arrow.svg')";
-    cards.style.maxHeight = "1000";
-    hidden_card.classList.add('brands__card--hide')
+    more_btn__brands.textContent = "Скрыть";
+    more_btn__brands.classList.add("rotate");
+    list_brands.style.maxHeight = "1000px";
+
   }else {
-    more_btn.textContent = "Показать все";
-    more_btn.style.backgroundImage = "url('../img/more.svg')";
-    cards.style.maxHeight = "150px";
+    more_btn__brands.textContent = "Показать все";
+    more_btn__brands.classList.remove("rotate");
+    list_brands.style.maxHeight = "150px";
   }
+
+})
+
+more_btn__technics.addEventListener('click', function ( ) {
+  console.log('tech')
+
+  let text = more_btn__technics.textContent;
+
+
+  if (text === "Показать все") {
+    more_btn__technics.textContent = "Скрыть";
+    more_btn__technics.classList.add("rotate");
+    list_technics.style.maxHeight = "1500px";
+
+  }else {
+    more_btn__technics.textContent = "Показать все";
+    more_btn__technics.classList.remove("rotate");
+    list_technics.style.maxHeight = "150px";
+  }
+
 })
 
 
-let swiper = new Swiper('.swiper-container', {
-  loop: true,
+const mySwiper = new Swiper('.swiper-container', {
+
   pagination: {
     el: '.swiper-pagination',
-    clickable: true
-  }, scrollbar: {
+    clickable: true,
+  },
+
+  scrollbar: {
     el: '.swiper-scrollbar',
-    draggable: true
-  }
-});
+  },
+  spaceBetween: 16,
+  slidesPerView: 1.3,
+
+//  spaceBetween: 30
+})
 
 
-if (window.innerWidth >= 576) {
-  swiper.destroy(true, true);
+if(window.innerWidth >= 576) {
+  mySwiper.destroy(true, true);
+  console.log("destroy")
 }
-
-
-
 
