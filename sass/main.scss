@@ -4,7 +4,8 @@
 @import "components/content";
 @import "components/tabs";
 @import "components/more";
-@import "service";
+@import "components/service";
+@import "components/menu";
 
 
 *,
@@ -14,6 +15,7 @@
     padding: 0;
     box-sizing: inherit;
 }
+
 body {
     font-family: "TT Lakes", serif;
     font-weight: 400;
@@ -30,6 +32,9 @@ body {
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
+    .modal-menu {
+        display: none;
+    }
     header .page-header {
         display: none;
     }
@@ -61,6 +66,7 @@ body {
     }
     .content {
         flex-direction: column;
+
         .column-left {
             padding: 6px 16px;
             width: 100%;
@@ -69,6 +75,7 @@ body {
                 display: none;
             }
         }
+
         .column-right {
             width: 100%;
         }
@@ -76,6 +83,10 @@ body {
 }
 
 @media (max-width: 1119px) {
+    .modal-menu {
+        transform: translateX(-400px);
+    }
+
     .header {
         background-color: $color-bg-nav;
     }
@@ -111,19 +122,29 @@ body {
 
 @media (min-width: 1120px) {
     body {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-template-row: 46px 1fr;
         background-color: #F8F8F8;
         margin: 30px auto;
-        width: 1120px;
-        main {
-            border-top: none;
-        }
-    }
+        width: 1440px;
 
+
+    }
+    .modal-menu {
+        width: 320px;
+        grid-column: 1/2;
+    }
     .header {
         padding: 0;
         text-align: end;
         background-color: $color-bg-main;
+        grid-column: 2/-1;
     }
+    main {
+        grid-column: 2/-1;
+    }
+
 
     main .page-header {
         display: none;

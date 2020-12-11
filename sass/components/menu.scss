@@ -1,39 +1,8 @@
-@import "abstracts/variables";
-@import "abstracts/typography";
-@import "components/header";
-
-
-*,
-*::after,
-*:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    position: relative;
-}
-
-body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 768px;
-    font-family: "TT Lakes", serif;
-    font-size: 16px;
-    font-weight: 400;
-    box-sizing: border-box;
-    background-color: white;
-    margin: 0 auto;
-
-
-}
+@import "../abstracts/variables";
 
 .modal-menu {
     max-width: 360px;
     min-height: 768px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 19px 24px 32px 24px;
