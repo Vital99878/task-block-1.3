@@ -1,9 +1,11 @@
 @import "abstracts/typography";
 @import "components/header";
+@import "components/menu";
 @import "components/content";
 @import "components/tabs";
 @import "components/more";
-@import "brands";
+@import "service";
+
 
 *,
 *::after,
@@ -12,7 +14,6 @@
     padding: 0;
     box-sizing: inherit;
 }
-
 body {
     font-family: "TT Lakes", serif;
     font-weight: 400;
@@ -27,6 +28,7 @@ body {
         border-top: 1px solid $color-main-top-line;
     }
 }
+
 @media (min-width: 320px) and (max-width: 768px) {
     header .page-header {
         display: none;
@@ -158,10 +160,4 @@ body {
         overflow-x: visible;
     }
 }
-
-
-
-
-
-
 
