@@ -6,13 +6,21 @@ let body = document.querySelector('body');
 
 menu__icon.addEventListener('click', function ( ) {
   console.log("menu")
-  menu__modal.style.transform = "translateX(0px)";
+  menu__modal.style.transform = "translateX(0)";
   body.style.zIndex = "100";
+//  body.style.overflow= "hidden"
 })
 
 menu__close.addEventListener('click', function ( ) {
   console.log("menu")
-  menu__modal.style.transform = "translateX(-400px)";
+  menu__modal.style.transform = "translateX(-100%)";
+  body.style.overflow= "visible"
+})
+
+menu__modal.addEventListener("click", function (  ) {
+  console.log('work')
+  menu__modal.style.transform = "translateX(-100%)";
+  body.style.overflow= "visible"
 })
 
 
