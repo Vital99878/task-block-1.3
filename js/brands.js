@@ -1,8 +1,7 @@
 
 let more_btn = document.querySelector('.more');
 let hidden_card = document.querySelector('.brands__card:nth-child(8)');
-let cards = document.querySelector('.brands__cards');
-
+let cards = document.querySelector('.brands__list');
 
 more_btn.addEventListener('click', function ( ) {
   let text = more_btn.textContent;
@@ -17,4 +16,24 @@ more_btn.addEventListener('click', function ( ) {
     cards.style.maxHeight = "150px";
   }
 })
+
+
+let swiper = new Swiper('.swiper-container', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }, scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  }
+});
+
+
+if (window.innerWidth >= 576) {
+  swiper.destroy(true, true);
+}
+
+
+
 

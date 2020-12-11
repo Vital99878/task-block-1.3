@@ -1,17 +1,9 @@
-@font-face {
-  font-family: "TT Lakes";
-  font-weight: normal;
-  src: url("../../fonts/TTLakes-Regular.woff"), url("../../fonts/TTLakes-Regular.eot"), url("../../fonts/TTLakes-Regular.ttf"); }
-
-@font-face {
-  font-family: "TT Lakes";
-  font-weight: 700;
-  src: url("../../fonts/TTLakes-Bold.woff"), url("../../fonts/TTLakes-Bold.eot"), url("../../fonts/TTLakes-Bold.ttf"); }
-
-@font-face {
-  font-family: "TT Lakes";
-  font-weight: 500;
-  src: url("../../fonts/TTLakes-Medium.woff"), url("../../fonts/TTLakes-Medium.eot"), url("../../fonts/TTLakes-Medium.ttf"); }
+*,
+*::after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 .title {
   padding: 16px;
@@ -20,13 +12,67 @@
   background: linear-gradient(to right, #F2F2F2, #FFFFFF);
   border-top: 1px solid #D9FFF5; }
 
+.brands {
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F2F2; }
+  .brands__item {
+    position: relative;
+    height: 72px;
+    list-style: none;
+    background: url("../img/go.svg") no-repeat 93% 50% #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px; }
+  .brands__item--hide {
+    display: none; }
+  .brands__item img {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%); }
+
+@media (min-width: 320px) {
+  .brands__item {
+    width: 240px; } }
+
+@media (min-width: 576px) {
+  .brands__list {
+    padding: 24px;
+    display: grid;
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 148px;
+    overflow-y: hidden; } }
+
+@media (min-width: 768px) {
+  .brands__list {
+    padding: 24px;
+    display: grid;
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1120px) {
+  .brands__list {
+    padding: 24px 32px;
+    display: grid;
+    grid-column-gap: 32px;
+    grid-template-columns: repeat(4, minmax(200px, 360px)); } }
+
+/*  title */
 @media (min-width: 320px) and (max-width: 767px) {
   .title {
     padding: 16px 24px; } }
 
+/*  More */
 @media (min-width: 768px) and (max-width: 1120px) {
   .title {
     padding: 16px 32px; } }
+
+@media (min-width: 320px) and (max-width: 574px) {
+  .more {
+    display: none; } }
 
 .more {
   font-family: "TT Lakes",serif;
@@ -43,62 +89,3 @@
 @media (min-width: 320px) and (max-width: 574px) {
   .more {
     display: none; } }
-
-*,
-*::after,
-*:before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-body {
-  background-color: #F2F2F2;
-  height: content-box; }
-
-.brands {
-  display: flex;
-  flex-direction: column;
-  background-color: #F2F2F2; }
-  .brands__cards {
-    max-height: 150px;
-    overflow-y: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 24px;
-    grid-row-gap: 16px;
-    padding: 24px;
-    transition: all 1s; }
-  .brands__card {
-    position: relative;
-    height: 72px;
-    min-width: 224px;
-    list-style: none;
-    margin-left: -3px;
-    background: url("../img/go.svg") no-repeat 93% 50% #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 6px; }
-    .brands__card--hide {
-      display: none; }
-    .brands__card img {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      transform: translateY(-50%); }
-
-@media (min-width: 1121px) {
-  .brands__cards {
-    grid-template-columns: repeat(4, minmax(200px, 360px)); }
-    .brands__cards__card {
-      max-width: 260px; } }
-
-@media (min-width: 575px) and (max-width: 767px) {
-  .brands__cards {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (min-width: 320px) and (max-width: 574px) {
-  .brands__cards {
-    display: block;
-    overflow-y: visible;
-    max-height: 1000px; }
-  .brands__card {
-    margin-bottom: 12px; } }
