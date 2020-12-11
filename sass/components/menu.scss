@@ -4,15 +4,17 @@
     position: absolute;
     transition-property: transform;
     transition: .4s;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5) 100% 100%;
     width: 100vw;
-    height: 100%;
+    height: 780px;
     z-index: 10;
 
 
     @media (min-width: 1120px)  {
-        transform: translateX(0);
+        position: relative;
+        transform: unset;
         width: 320px;
+        height: 100%;
     }
     @media (max-width: 1119px)  {
         transform: translateX(-100%);
@@ -22,6 +24,8 @@
         position: absolute;
         min-height: 768px;
         display: flex;
+        //height: 200%;
+        align-content: center;
         flex-direction: column;
         padding: 19px 24px 32px 24px;
         box-shadow: 0 10px 20px 16px #F2F2F2;
@@ -41,9 +45,11 @@
             overflow-x: scroll;
         }
         @media (min-width: 1120px)  {
-            position: relative;
+            position: static;
             width: 320px;
             box-shadow: 0 0 0 0;
+            height: 100%;
+            transform: translateX(0);
         }
     }
 
