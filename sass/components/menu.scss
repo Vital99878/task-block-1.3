@@ -1,12 +1,35 @@
 @import "../abstracts/variables";
 
 .modal-menu {
-    max-width: 360px;
+    position: absolute;
     min-height: 768px;
     display: flex;
     flex-direction: column;
     padding: 19px 24px 32px 24px;
     box-shadow: 0 10px 20px 16px #F2F2F2;
+    background-color: #FFFFFF;
+    z-index: 5;
+    transition: all .6s ease-out;
+    transform: translateX(-400px);
+
+    @media (min-width: 1120px) {
+        width: 320px;
+    }
+
+    @media (max-width: 360px) {
+        width: 100vw;
+        box-shadow: none;
+    }
+    @media (min-width: 361px) and( max-width: 1119px) {
+        width: 320px;
+        background-size: 100vw;
+    }
+    @media (min-width: 1120px)  {
+        box-shadow: 0 0 0 0 ;
+        position: relative;
+        width: 320px;
+        transform: translateX(0);
+    }
 }
 
 .nav {
@@ -79,3 +102,5 @@
         color: $menu-item-active;
     }
 }
+
+
