@@ -22,6 +22,7 @@
     background-color: $color-bg-nav;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
 
     &--p-main {
         padding: 19px 24px;
@@ -186,7 +187,6 @@
         grid-column: 2/3;
         grid-row: 1/2;
     }
-
     main .page-header {
         display: none;
     }

@@ -14,20 +14,12 @@
 <body>
 
 <article class="modal-menu">
-
     <div class="modal-menu__wrapper">
-
-        <div class="header">
-            <div class="menu">
-                <button class="header__icon header__icon--close-menu"></button>
-                <img class="logo logo--no-divider" src="img/logo.svg" alt="Logo CPS">
-            </div>
-
-            <div class="icons">
-                <button class="header__icon header__icon-checkstatus">Статус ремонта</button>
-            </div>
+        <div class="modal-menu__header">
+            <button class="modal-menu__icon modal-menu__icon--close"></button>
+            <img class="" src="img/logo.svg" alt="Logo CPS">
+            <button class="modal-menu__icon modal-menu__icon--checkstatus"></button>
         </div>
-
         <nav class="nav">
             <ul class="nav__list">
                 <li><a class="nav__link nav__link--active" href="">Ремонт техники</a></li>
@@ -40,12 +32,11 @@
                 <li><a class="nav__link" href="">Контакты</a></li>
             </ul>
         </nav>
-
         <div>
-            <div class="icons">
-                <button class="header__icon header__icon-phone "></button>
-                <button class="header__icon header__icon-chat "></button>
-                <button class="header__icon header__icon-profile header__icon__profile--no-divider"></button>
+            <div class="modal-menu__bottom-icons">
+                <button class="modal-menu__icon modal-menu__icon--phone"></button>
+                <button class="modal-menu__icon modal-menu__icon--chat"></button>
+                <button class="modal-menu__icon modal-menu__icon--profile"></button>
             </div>
             <div class="contacts">
                 <a href="mailto:mail@cps.com" class="contacts__email">mail@cps.com</a>
@@ -58,7 +49,6 @@
             </div>
         </div>
     </div>
-
 </article>
 
 <header class="header header--p-main">
@@ -159,6 +149,7 @@
     <p class="footer__content footer__content--align-right">Информация, размещенная на данной странице, не является
         публичной офертой</p>
 </footer>
+
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="js/brands.js"></script>
 <script src="js/menu.js"></script>
