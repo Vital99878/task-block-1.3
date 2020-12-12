@@ -15,6 +15,8 @@
         transform: unset;
         width: 320px;
         height: 100%;
+        grid-column: 1/2;
+        grid-row: 1/ 4;
     }
     @media (max-width: 1119px)  {
         transform: translateX(-100%);
