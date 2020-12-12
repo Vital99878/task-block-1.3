@@ -654,3 +654,27 @@ body {
   @media (min-width: 1120px) {
     .footer {
       grid-column: 2/ -1; } }
+
+.order {
+  position: relative;
+  width: 120px;
+  height: 32px;
+  font-family: "TT Lakes", serif;
+  font-weight: 700;
+  background: url("../img/arrow__order.svg") no-repeat 88% 50% #FF3E79;
+  font-size: 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #FFFFFF;
+  border: none;
+  text-transform: uppercase;
+  transition: all .4s ease-in-out; }
+  .order:hover {
+    filter: hue-rotate(25deg);
+    transform: scale(1.02);
+    letter-spacing: 1.06px; }
+  .order span {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 10%; }
