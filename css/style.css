@@ -559,3 +559,36 @@ body {
   .tabs {
     flex-wrap: wrap;
     overflow-x: visible; } }
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #D9FFF5; }
+  .footer__content {
+    font-size: 14px;
+    color: #7E7E82;
+    padding: 0 6px; }
+    .footer__content--align-left {
+      text-align: left; }
+    .footer__content--align-center {
+      text-align: center; }
+    .footer__content--align-right {
+      text-align: right; }
+  @media (max-width: 600px) {
+    .footer {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      padding: 16px; }
+      .footer .footer__content:not(:last-child) {
+        margin-bottom: 16px; }
+      .footer .footer__content--align-left, .footer .footer__content--align-center, .footer .footer__content--align-right {
+        text-align: center; } }
+  @media (max-width: 768px) {
+    .footer {
+      padding: 24px; } }
+  @media (min-width: 769px) {
+    .footer {
+      padding: 32px; } }
+  @media (min-width: 1120px) {
+    .footer {
+      grid-column: 2/ -1; } }
