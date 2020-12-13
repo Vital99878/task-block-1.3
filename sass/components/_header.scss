@@ -19,7 +19,8 @@
 .header {
     display: flex;
     flex-direction: row;
-    background-color: $color-bg-nav;
+    //background-color: $color-bg-nav;
+    background-color: rebeccapurple;
     justify-content: space-between;
     align-items: center;
     height: 56px;
@@ -153,6 +154,7 @@
 
     .header {
         background-color: $color-bg-nav;
+        height: 66px;
     }
 
     .header .logo {
@@ -181,7 +183,7 @@
 
 @media (min-width: 1120px) {
     .header {
-        padding: 0;
+        padding: 0 16px;
         text-align: end;
         background-color: $color-bg-main;
         grid-column: 2/3;
