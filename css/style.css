@@ -689,6 +689,25 @@ body {
   flex-direction: column;
   border-radius: 6px;
   margin: 24px 24px; }
+  .prices__info {
+    max-width: 426px;
+    margin: 24px 24px 60px 24px;
+    font-family: TT Lakes, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #1B1C21; }
+  .prices__info-text {
+    margin-bottom: 14px; }
+  .prices__info-offer {
+    padding-right: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    background: url("../img/arrow-right.svg") no-repeat 100% 50%; }
+    .prices__info-offer:hover {
+      cursor: pointer; }
 
 .prices__header {
   font-family: "TT Lakes", sans-serif;
@@ -719,3 +738,7 @@ body {
   .prices__item:last-child {
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px; }
+
+@media (max-width: 576px) {
+  .prices {
+    display: none; } }
