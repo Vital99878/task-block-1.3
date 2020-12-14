@@ -19,9 +19,11 @@
 .header {
     display: flex;
     flex-direction: row;
-    background-color: $color-bg-nav;
+    //background-color: $color-bg-nav;
+    background-color: rebeccapurple;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
 
     &--p-main {
         padding: 19px 24px;
@@ -119,4 +121,103 @@
 }
 
 
+@media (min-width: 320px) and (max-width: 768px) {
 
+    header .page-header {
+        display: none;
+    }
+
+    .header .logo {
+        padding-left: 0;
+        padding-right: 16px;
+        background: url("../img/divider.svg") 100% 50% no-repeat;
+    }
+
+    .icons .header__icon:nth-child(n+3), .icons img {
+        display: none;
+    }
+
+    .menu img:nth-child(2) {
+        order: 0;
+    }
+
+    main {
+        .page-header {
+            padding: 6px 16px;
+            background-position: 0 50%;
+        }
+    }
+
+}
+
+@media (max-width: 1119px) {
+
+    .header {
+        background-color: $color-bg-nav;
+        height: 66px;
+    }
+
+    .header .logo {
+        padding-right: 0;
+        padding-left: 16px;
+        background: url("../img/divider.svg") 0 50% no-repeat;
+    }
+
+    .header .page-header {
+        display: none;
+    }
+    main .page-header {
+        display: flex;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .menu, .icons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (min-width: 1120px) {
+    .header {
+        padding: 0 16px;
+        text-align: end;
+        background-color: $color-bg-main;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    main .page-header {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .icons .header__icon:nth-child(1),
+    .icons .header__icon:nth-child(2),
+    .icons .header__icon:nth-child(3),
+    .icons img {
+        display: none;
+    }
+
+    .icons .header__icon:nth-child(4), .icons .header__icon:nth-child(5) {
+        background-position: 100% 50%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        padding-right: 46px;
+    }
+
+    .icons button {
+        font-size: 16px;
+    }
+}

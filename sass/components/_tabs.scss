@@ -31,5 +31,17 @@
         box-sizing: border-box;
         border-radius: 6px;
     }
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        padding: 6px 16px;
+        overflow-x: scroll;
+    }
+    @media (max-width: 1119px) {
+        margin-bottom: 16px;
+    }
+    @media (min-width: 1120px) {
+            flex-wrap: wrap;
+            overflow-x: visible;
+    }
 }
 
