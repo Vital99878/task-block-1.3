@@ -169,7 +169,7 @@
 .modal-menu {
   position: absolute;
   transition-property: transform;
-  transition: .4s;
+  transition: all 1s;
   background: rgba(255, 255, 255, 0.5) 100% 100%;
   width: 100vw;
   height: 780px;
@@ -491,7 +491,7 @@
 .modal-menu {
   position: absolute;
   transition-property: transform;
-  transition: .4s;
+  transition: all 1s;
   background: rgba(255, 255, 255, 0.5) 100% 100%;
   width: 100vw;
   height: 780px;
@@ -782,17 +782,17 @@ body {
   .swiper-container--hide-576 {
     display: none; } }
 
-body {
-  display: unset;
-  position: static; }
-
 .bg_form {
-  position: relative;
-  background-color: #FFFFFF;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.96);
   width: 100%;
   height: 940px;
   max-width: 1440px;
-  min-height: 676px; }
+  min-height: 676px;
+  z-index: 20;
+  transform: translateX(100%);
+  margin: 0 auto;
+  transition: all 1s; }
 
 .feedback {
   position: absolute;
@@ -845,4 +845,4 @@ body {
   .close-modal {
     position: absolute;
     left: -64px;
-    top: 32px; } }
+    top: 50px; } }
