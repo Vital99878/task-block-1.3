@@ -56,6 +56,17 @@
             color: #1B1C21;
         }
     }
+
+    &__price-list {
+        position: relative;
+        list-style: none;
+        box-sizing: border-box;
+        height: 160px;
+        background: url("../img/go.svg") no-repeat 93% 83% #FFFFFF;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+
+    }
 }
 
 @media (max-width: 575px) {

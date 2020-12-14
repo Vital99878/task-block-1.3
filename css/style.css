@@ -421,6 +421,14 @@
       font-family: "TT Lakes", sans-serif;
       font-weight: 500;
       color: #1B1C21; }
+  .service__price-list {
+    position: relative;
+    list-style: none;
+    box-sizing: border-box;
+    height: 160px;
+    background: url("../img/go.svg") no-repeat 93% 83% #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px; }
 
 @media (max-width: 575px) {
   .swiper-container {
@@ -684,12 +692,40 @@ body {
     top: 50%;
     left: 10%; }
 
-.prices {
+.price-list {
   display: flex;
   flex-direction: column;
   border-radius: 6px;
   margin: 24px 24px; }
-  .prices__info {
+  .price-list__header {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: 1.8fr .6fr .6fr 120px;
+    grid-column-gap: 10px;
+    align-items: center;
+    color: #7E7E82; }
+  .price-list__item {
+    background-color: #FFFFFF;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #1B1C21;
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: 1.8fr .6fr .6fr 120px;
+    grid-column-gap: 10px;
+    border-bottom: 1px solid #EAEAEA;
+    align-items: center; }
+    .price-list__item:nth-child(2) {
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px; }
+    .price-list__item:last-child {
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px; }
+  .price-list__info {
     max-width: 426px;
     margin: 24px 24px 60px 24px;
     font-family: TT Lakes, sans-serif;
@@ -699,46 +735,15 @@ body {
     line-height: 20px;
     letter-spacing: 0.2px;
     color: #1B1C21; }
-  .prices__info-text {
+  .price-list__info--text {
     margin-bottom: 14px; }
-  .prices__info-offer {
+  .price-list__info--offer {
     padding-right: 16px;
     font-size: 16px;
     font-weight: 500;
     background: url("../img/arrow-right.svg") no-repeat 100% 50%; }
-    .prices__info-offer:hover {
+    .price-list__info--offer:hover {
       cursor: pointer; }
-
-.prices__header {
-  font-family: "TT Lakes", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  padding: 16px 24px;
-  display: grid;
-  grid-template-columns: 1.8fr .6fr .6fr 120px;
-  grid-column-gap: 10px;
-  align-items: center;
-  color: #7E7E82; }
-
-.prices__item {
-  background-color: #FFFFFF;
-  font-family: "TT Lakes", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #1B1C21;
-  padding: 16px 24px;
-  display: grid;
-  grid-template-columns: 1.8fr .6fr .6fr 120px;
-  grid-column-gap: 10px;
-  border-bottom: 1px solid #EAEAEA;
-  align-items: center; }
-  .prices__item:nth-child(2) {
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px; }
-  .prices__item:last-child {
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px; }
-
-@media (max-width: 576px) {
-  .prices {
-    display: none; } }
+  @media (max-width: 576px) {
+    .price-list {
+      display: none; } }

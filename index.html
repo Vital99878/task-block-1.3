@@ -121,7 +121,7 @@
     <section class="service">
         <h2 class="service__title">Ремонт различных видов техники</h2>
         <div class="swiper-container">
-            <ul class="swiper-wrapper service__list service__list--technics">
+            <ul class="swiper-wrapper service__list service__list">
                 <li class="swiper-slide service__technic"><a href="">Ремонт ноутбуков</a></li>
                 <li class="swiper-slide service__technic"><a href="">Ремонт планшетов</a></li>
                 <li class="swiper-slide service__technic"><a href="">Ремонт ПК</a></li>
@@ -140,49 +140,67 @@
         <button class="more more--technics more--ml-32" type="button">Показать все</button>
     </section>
 
-    <section>
+    <section class="service">
         <h2 class="service__title">цены на услуги</h2>
-        <ul class="prices">
-            <li class="prices__header">
+        <ul class="service__price-list price-list">
+            <li class="price-list__header">
                 <p>Ремонтные услуги</p>
                 <p>Цена</p>
                 <p>Срок</p>
 
             </li>
-            <li class="prices__item">
+            <li class="price-list__item">
                 <p>Диагностика</p>
                 <p>Бесплатно</p>
                 <p>30 мин</p>
                 <button class="order"><span>Заказать</span></button>
             </li>
-            <li class="prices__item">
+            <li class="price-list__item">
                 <p>Замена дисплея</p>
                 <p>1 000 ₽</p>
                 <p>30-120 мин</p>
                 <button class="order"><span>Заказать</span></button>
             </li>
-            <li class="prices__item">
+            <li class="price-list__item">
                 <p>Замена полифонического динамика. Замена полифонического динамика.</p>
                 <p>1 000 ₽</p>
                 <p>30-120 мин</p>
                 <button class="order"><span>Заказать</span></button>
             </li>
-            <li class="prices__item">
+            <li class="price-list__item">
                 <p>Тестирование с выдачей технического заключения</p>
                 <p>1 000 ₽</p>
                 <p>30-120 мин</p>
                 <button class="order"><span>Заказать</span></button>
             </li>
-            <li class="prices__item">
+            <li class="price-list__item">
                 <p>Замена программного обеспечения</p>
                 <p>1 000 ₽</p>
                 <p>30-120 мин</p>
                 <button class="order"><span>Заказать</span></button>
             </li>
         </ul>
-        <div class="prices__info">
-            <p class="prices__info-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-            <a class="prices__info-offer">Получить коммерческое предложение</a>
+
+        <div class="swiper-container">
+            <ul class="swiper-wrapper service__list service__price-list">
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+                <li class="swiper-slide service__price-item">item</li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="price-list__info">
+            <p class="price-list__info--text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+            <a class="price-list__info--offer">Получить коммерческое предложение</a>
         </div>
     </section>
 </main>

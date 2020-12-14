@@ -1,10 +1,46 @@
 @import "../abstracts/variables";
 
-.prices {
+.price-list {
     display: flex;
     flex-direction: column;
     border-radius: 6px;
     margin: 24px 24px;
+
+    &__header {
+        font-family: "TT Lakes", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 16px 24px;
+        display: grid;
+        grid-template-columns: 1.8fr .6fr .6fr 120px;
+        grid-column-gap: 10px;
+        align-items: center;
+        color: #7E7E82;
+    }
+
+    &__item {
+        background-color: #FFFFFF;
+        font-family: "TT Lakes", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #1B1C21;
+        padding: 16px 24px;
+        display: grid;
+        grid-template-columns: 1.8fr .6fr .6fr 120px;
+        grid-column-gap: 10px;
+        border-bottom: 1px solid #EAEAEA;
+        align-items: center;
+
+        &:nth-child(2) {
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+        }
+
+        &:last-child {
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+    }
 
     &__info {
         max-width: 426px;
@@ -18,59 +54,27 @@
         color: #1B1C21;
     }
 
-    &__info-text {
+    &__info--text {
         margin-bottom: 14px;
     }
 
-    &__info-offer {
+    &__info--offer {
         padding-right: 16px;
         font-size: 16px;
         font-weight: 500;
         background: url("../img/arrow-right.svg") no-repeat 100% 50%;
+
         &:hover {
             cursor: pointer;
         }
     }
-}
 
-.prices__header {
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 16px 24px;
-    display: grid;
-    grid-template-columns: 1.8fr .6fr .6fr 120px;
-    grid-column-gap: 10px;
-    align-items: center;
-    color: #7E7E82;
-}
-
-.prices__item {
-    background-color: #FFFFFF;
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #1B1C21;
-    padding: 16px 24px;
-    display: grid;
-    grid-template-columns: 1.8fr .6fr .6fr 120px;
-    grid-column-gap: 10px;
-    border-bottom: 1px solid #EAEAEA;
-    align-items: center;
-
-    &:nth-child(2) {
-        border-top-right-radius: 6px;
-        border-top-left-radius: 6px;
-    }
-
-    &:last-child {
-        border-bottom-right-radius: 6px;
-        border-bottom-left-radius: 6px;
-    }
-}
-
-@media (max-width: 576px) {
-    .prices {
+    @media (max-width: 576px) {
         display: none;
     }
 }
+
+
+
+
+
