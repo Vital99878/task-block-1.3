@@ -10,14 +10,16 @@
     margin: 20px 0;
 
     &--pos-ml {
-        margin-left: -32px;
+        margin-left: -16px;
         margin-bottom: 24px;
         margin-top: 0;
     }
+
     &--view-m {
         margin-left: -24px;
         padding-left: 20px;
     }
+
 }
 
 .header {
@@ -223,5 +225,17 @@
 
     .icons button {
         font-size: 16px;
+    }
+}
+
+@media (min-width: 576px) {
+    .page-header--modal {
+        margin-left: -32px;
+    }
+}
+@media (max-width: 576px) {
+    .page-header--modal {
+        margin-left: -16px;
+        padding-left: 16px;
     }
 }
