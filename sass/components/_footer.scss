@@ -1,0 +1,50 @@
+@import "../abstracts/variables";
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid $border-top;
+
+    &__content {
+        font-size: 14px;
+        color: $color-text-tab;
+        padding: 0 6px;
+
+
+        &--align-left {
+            text-align: left;
+        }
+
+        &--align-center {
+            text-align: center;
+        }
+
+        &--align-right {
+            text-align: right;
+        }
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 16px;
+        .footer__content:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        .footer__content--align-left,
+        .footer__content--align-center,
+        .footer__content--align-right {
+            text-align: center;
+        }
+    }
+    @media (max-width: 768px) {
+        padding: 24px;
+    }
+    @media (min-width: 769px) {
+        padding: 32px;
+    }
+    @media (min-width: 1120px) {
+        grid-column: 2/ -1;
+    }
+
+}

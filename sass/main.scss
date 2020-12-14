@@ -8,6 +8,7 @@
 @import "components/menu";
 
 
+
 *,
 *::after,
 *:before {
@@ -34,144 +35,26 @@ body {
 
 @media (min-width: 320px) and (max-width: 768px) {
 
-    header .page-header {
-        display: none;
-    }
-
-    .header .logo {
-        padding-left: 0;
-        padding-right: 16px;
-        background: url("../img/divider.svg") 100% 50% no-repeat;
-    }
-
-    .icons .header__icon:nth-child(n+3), .icons img {
-        display: none;
-    }
-
-    .menu img:nth-child(2) {
-        order: 0;
-    }
-
-    .tabs {
-        padding: 6px 16px;
-        overflow-x: scroll;
-    }
-
-    main {
-        .page-header {
-            padding: 6px 16px;
-            background-position: 0 50%;
-        }
-    }
-    .content {
-        flex-direction: column;
-
-        .column-left {
-            padding: 6px 16px;
-            width: 100%;
-
-            &__text-hidden {
-                display: none;
-            }
-        }
-
-        .column-right {
-            width: 100%;
-        }
-    }
 }
 
 @media (max-width: 1119px) {
     body {
         position: relative;
     }
-
-    .header {
-        background-color: $color-bg-nav;
-    }
-
-    .header .logo {
-        padding-right: 0;
-        padding-left: 16px;
-        background: url("../img/divider.svg") 0 50% no-repeat;
-    }
-
-    .header .page-header {
-        display: none;
-    }
-    main .page-header {
-        display: flex;
-    }
-
-    .icons {
-        display: flex;
-    }
-
-    .menu, .icons {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .tabs {
-        margin-bottom: 16px;
-    }
 }
 
 @media (min-width: 1120px) {
-
     body {
         display: grid;
         grid-template-columns: 320px 1fr;
-        grid-template-rows: 48px 1fr;
+        grid-template-rows: 68px 1fr;
         background-color: #F8F8F8;
         margin: 30px auto;
         width: 1440px;
     }
-    .modal-menu {
-        grid-column: 1/2;
-        grid-row: 1/ -1;
-    }
-    .header {
-        padding: 0;
-        text-align: end;
-        background-color: $color-bg-main;
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-
-    main .page-header {
-        display: none;
-    }
-    .menu {
-        display: none;
-    }
-
-    .icons {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .icons .header__icon:nth-child(1),
-    .icons .header__icon:nth-child(2),
-    .icons .header__icon:nth-child(3),
-    .icons img {
-        display: none;
-    }
-
-    .icons .header__icon:nth-child(4), .icons .header__icon:nth-child(5) {
-        background-position: 100% 50%;
-        font-size: 16px;
-        font-weight: 500;
-        color: black;
-        padding-right: 46px;
-    }
-
-    .icons button {
-        font-size: 16px;
-    }
-
-    .tabs {
-        flex-wrap: wrap;
-        overflow-x: visible;
-    }
 }
 
+@import "components/footer";
+@import "components/order";
+@import "components/price-list";
+@import "components/price-card";

@@ -1,0 +1,39 @@
+@import "../abstracts/variables";
+
+/*<button class="order"><span>Заказать</span></button>*/
+
+.order {
+    position: relative;
+    width: 120px;
+    height: 32px;
+    font-family: "TT Lakes", serif;
+    font-weight: 700;
+    background: url("../img/arrow__order.svg") no-repeat 88% 50% #FF3E79;
+    font-size: 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: none;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        filter: hue-rotate(25deg);
+        transform: scale(1.02);
+        letter-spacing: 1.06px;
+    }
+
+    span {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 10%;
+    }
+
+
+}
+
+
+
+
+//@media (min-width: 576px) {}
