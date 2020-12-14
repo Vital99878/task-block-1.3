@@ -1,0 +1,33 @@
+.bg_form {
+  position: relative;
+  background-color: #FFFFFF;
+  max-width: 1440px;
+  max-height: 940px; }
+
+.feedback {
+  padding: 40px 32px;
+  font-family: "TT Lakes", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 440px;
+  max-height: 940px;
+  border-left: 1px solid #D9FFF5;
+  display: flex;
+  flex-direction: column; }
+  .feedback input {
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    max-width: 376px;
+    height: 48px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    transition: all .5s ease-out; }
+  .feedback input:focus {
+    border-bottom: 4px solid #D9FFF5; }
+  .feedback__personal-info {
+    margin-bottom: 24px; }
+    .feedback__personal-info--impotent {
+      color: #FF3E79; }
