@@ -1,7 +1,8 @@
 @import "../abstracts/variables";
 
 .price-list {
-    display: flex;
+
+    display: none;
     flex-direction: column;
     border-radius: 6px;
     margin: 24px 24px;
@@ -44,7 +45,7 @@
 
     &__info {
         max-width: 426px;
-        margin: 24px 24px 60px 24px;
+        margin: 32px 24px 60px 24px;
         font-family: TT Lakes, sans-serif;
         font-size: 14px;
         font-style: normal;
@@ -69,8 +70,8 @@
         }
     }
 
-    @media (max-width: 575px) {
-        display: none;
+    @media (min-width: 576px) {
+        display: flex;
     }
 }
 
