@@ -18,6 +18,8 @@
   font-family: "TT Lakes", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  width: 100%;
+  min-width: 320px;
   max-width: 440px;
   height: 940px;
   min-height: 676px;
@@ -29,7 +31,7 @@
   @media (max-width: 575px) {
     .feedback {
       padding: 16px; } }
-  .feedback input {
+  .feedback input, .feedback textarea {
     border: 1px solid #EAEAEA;
     border-radius: 8px;
     max-width: 376px;
@@ -37,6 +39,10 @@
     margin-bottom: 16px;
     padding-left: 16px;
     transition: all .5s ease-out; }
+  .feedback textarea {
+    padding-top: 16px;
+    height: 118px;
+    min-width: 288px; }
   .feedback input:focus {
     border-bottom: 4px solid #D9FFF5; }
   .feedback__personal-info {

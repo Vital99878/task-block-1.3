@@ -24,6 +24,7 @@ body {
     background-color: $color-bg-main;
     margin: 0 auto;
     z-index: 15;
+    overflow-x: hidden;
 
     main {
         display: flex;
