@@ -8,6 +8,7 @@
 @import "components/menu";
 
 
+
 *,
 *::after,
 *:before {
@@ -55,4 +56,5 @@ body {
 
 @import "components/footer";
 @import "components/order";
-@import "components/prices";
+@import "components/price-list";
+@import "components/price-card";

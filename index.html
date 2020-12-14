@@ -121,7 +121,7 @@
     <section class="service">
         <h2 class="service__title">Ремонт различных видов техники</h2>
         <div class="swiper-container">
-            <ul class="swiper-wrapper service__list service__list">
+            <ul class="swiper-wrapper service__list">
                 <li class="swiper-slide service__technic"><a href="">Ремонт ноутбуков</a></li>
                 <li class="swiper-slide service__technic"><a href="">Ремонт планшетов</a></li>
                 <li class="swiper-slide service__technic"><a href="">Ремонт ПК</a></li>
@@ -142,7 +142,7 @@
 
     <section class="service">
         <h2 class="service__title">цены на услуги</h2>
-        <ul class="service__price-list price-list">
+        <ul class="price-list">
             <li class="price-list__header">
                 <p>Ремонтные услуги</p>
                 <p>Цена</p>
@@ -181,25 +181,102 @@
             </li>
         </ul>
 
-        <div class="swiper-container">
-            <ul class="swiper-wrapper service__list service__price-list">
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
-                <li class="swiper-slide service__price-item">item</li>
+        <div class="swiper-container swiper-container--hide-576">
+            <ul class="swiper-wrapper service__list">
+                <li class="swiper-slide service__price-card price-card">
+                    <div>
+                        <p class="price-card__header">Ремонтные услуги</p>
+                        <p class="price-card__content">Диагностика</p>
+                    </div>
+                    <div>
+                        <p class="price-card__header">Цена</p>
+                        <p class="price-card__content">Бесплатно</p>
+                    </div>
+                    <div class="price-card__order-block">
+                        <div>
+                            <p class="price-card__header">Срок</p>
+                            <p class="price-card__content">30 мин</p>
+                        </div>
+                        <button class="order"><span>Заказать</span></button>
+                    </div>
+                </li>
+                <li class="swiper-slide service__price-card price-card">
+                    <div>
+                        <p class="price-card__header">Ремонтные услуги</p>
+                        <p class="price-card__content">Замена дисплея</p>
+                    </div>
+                    <div>
+                        <p class="price-card__header">1 000 ₽</p>
+                        <p class="price-card__content">30-120 мин</p>
+                    </div>
+                    <div class="price-card__order-block">
+                        <div>
+                            <p class="price-card__header">Срок</p>
+                            <p class="price-card__content">30-120 мин</p>
+                        </div>
+                        <button class="order"><span>Заказать</span></button>
+                    </div>
+                </li>
+                <li class="swiper-slide service__price-card price-card">
+                    <div>
+                        <p class="price-card__header">Ремонтные услуги</p>
+                        <p class="price-card__content">Замена полифонического динамика</p>
+                    </div>
+                    <div>
+                        <p class="price-card__header">1 000 ₽</p>
+                        <p class="price-card__content">30-120 мин</p>
+                    </div>
+                    <div class="price-card__order-block">
+                        <div>
+                            <p class="price-card__header">Срок</p>
+                            <p class="price-card__content">30-120 мин</p>
+                        </div>
+                        <button class="order"><span>Заказать</span></button>
+                    </div>
+                </li>
+                <li class="swiper-slide service__price-card price-card">
+                    <div>
+                        <p class="price-card__header">Ремонтные услуги</p>
+                        <p class="price-card__content">Тестирование с выдачей технического заключения</p>
+                    </div>
+                    <div>
+                        <p class="price-card__header">1 000 ₽</p>
+                        <p class="price-card__content">30-120 мин</p>
+                    </div>
+                    <div class="price-card__order-block">
+                        <div>
+                            <p class="price-card__header">Срок</p>
+                            <p class="price-card__content">30-120 мин</p>
+                        </div>
+                        <button class="order"><span>Заказать</span></button>
+                    </div>
+                </li>
+                <li class="swiper-slide service__price-card price-card">
+                    <div>
+                        <p class="price-card__header">Ремонтные услуги</p>
+                        <p class="price-card__content">Замена программного обеспечения</p>
+                    </div>
+                    <div>
+                        <p class="price-card__header">1 000 ₽</p>
+                        <p class="price-card__content">30-120 мин</p>
+                    </div>
+                    <div class="price-card__order-block">
+                        <div>
+                            <p class="price-card__header">Срок</p>
+                            <p class="price-card__content">30-120 мин</p>
+                        </div>
+                        <button class="order"><span>Заказать</span></button>
+                    </div>
+                </li>
+
+
             </ul>
             <div class="swiper-pagination"></div>
         </div>
 
         <div class="price-list__info">
-            <p class="price-list__info--text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+            <p class="price-list__info--text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+                услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
             <a class="price-list__info--offer">Получить коммерческое предложение</a>
         </div>
     </section>
