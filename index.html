@@ -17,9 +17,9 @@
 <article class="modal-menu">
     <div class="modal-menu__wrapper">
         <div class="modal-menu__header">
-            <button class="modal-menu__icon modal-menu__icon--close"></button>
+            <button class="close-icon close-icon--menu"></button>
             <img class="" src="img/logo.svg" alt="Logo CPS">
-            <button class="modal-menu__icon modal-menu__icon--checkstatus"></button>
+            <button class="search-icon"></button>
         </div>
         <nav class="nav">
             <ul class="nav__list">
@@ -34,10 +34,10 @@
             </ul>
         </nav>
         <div>
-            <div class="modal-menu__bottom-icons">
-                <button class="modal-menu__icon modal-menu__icon--phone"></button>
-                <button class="modal-menu__icon modal-menu__icon--chat"></button>
-                <button class="modal-menu__icon modal-menu__icon--profile"></button>
+            <div class="modal-menu__icons">
+                <button class="phone-icon"></button>
+                <button class="msg-icon"></button>
+                <button class="profile-icon"></button>
             </div>
             <div class="contacts">
                 <a href="mailto:mail@cps.com" class="contacts__email">mail@cps.com</a>
@@ -54,8 +54,8 @@
 
 <article class="bg_form modal-feedback modal-feedback--msg">
     <form class="feedback">
-        <button class="close-modal close-modal--feedback-msg close-modal--pos-my"></button>
-        <h1 class="page-header page-header--modal">Обратная связь</h1>
+        <button class="close-icon close-icon--feedback"></button>
+        <h1 class="page-heading page-header--modal">Обратная связь</h1>
         <input type="text" placeholder="Имя">
         <input type="text" placeholder="Телефон">
         <input type="text" placeholder="Электронная почта">
@@ -69,8 +69,8 @@
 
 <article class="bg_form modal-feedback modal-feedback--call">
     <form class="feedback">
-        <button class="close-modal close-modal--feedback--call close-modal--pos-my"></button>
-        <h1 class="page-header page-header--modal">Заказать звонок</h1>
+        <button class="close-icon close-icon--order"></button>
+        <h1 class="page-heading page-header--modal">Заказать звонок</h1>
         <input type="text" placeholder="Телефон">
         <button class="order order--pos-end"><span>Заказать</span></button>
     </form>
@@ -78,25 +78,25 @@
 <!--endregion-->
 
 <header class="header header--p-main">
-    <h1 class="page-header">Услуги и сервисы</h1>
+    <h1 class="page-heading">Услуги и сервисы</h1>
 
-    <div class="menu">
-        <button class="header__icon header__icon-menu"></button>
-        <img class="logo" src="img/logo.svg" alt="Logo CPS">
+    <div class="header__menu">
+        <button class="header__icon menu-icon"></button>
+        <img class="header__logo" src="img/logo.svg" alt="Logo CPS">
     </div>
 
-    <div class="icons">
-        <button class="header__icon header__icon-phone"></button>
-        <button class="header__icon header__icon-chat"></button>
-        <button class="header__icon header__icon-profile "></button>
-        <button class="header__icon header__icon-service">Оставить заявку</button>
-        <button class="header__icon header__icon-checkstatus">Статус ремонта</button>
+    <div class="header__icons">
+        <button class="header__icon phone-icon"></button>
+        <button class="header__icon msg-icon"></button>
+        <button class="header__icon profile-icon profile-icon--divider"></button>
+        <button class="header__icon service-icon">Оставить заявку</button>
+        <button class="header__icon search-icon">Статус ремонта</button>
     </div>
 </header>
 
 <main>
 
-    <h1 class="page-header">Услуги и сервисы</h1>
+    <h1 class="page-heading">Услуги и сервисы</h1>
 
     <ul class="tabs">
         <li class="tabs__tab tabs__tab-selected"><a href="pages/feedback.html">Ремонтируемые бренды</a></li>
@@ -148,7 +148,7 @@
     <section class="service">
         <h2 class="service__title">Ремонт различных видов техники</h2>
         <div class="swiper-container">
-            <ul class="swiper-wrapper service__list">
+            <ul class="swiper-wrapper service__list service__list--technics">
                 <li class="swiper-slide service__technic"><a href="">Ремонт ноутбуков</a></li>
                 <li class="swiper-slide service__technic"><a href="">Ремонт планшетов</a></li>
                 <li class="swiper-slide service__technic"><a href="">Ремонт ПК</a></li>
@@ -318,8 +318,8 @@
 </footer>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="js/brands.js"></script>
 <script src="js/modals.js"></script>
+<script src="js/brands.js"></script>
 
 </body>
 </html>

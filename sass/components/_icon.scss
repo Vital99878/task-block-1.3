@@ -1,0 +1,76 @@
+@import "../abstracts/variables";
+
+@mixin icon {
+    border: none;
+    height: 40px;
+    padding-right: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.close-icon, .menu-icon, .phone-icon, .msg-icon, .profile-icon, .service-icon, .search-icon {
+    @include icon;
+
+    &:hover {
+        filter: hue-rotate(25deg);
+        transform: scale(1.05);
+    }
+}
+
+
+.close-icon {
+    background: url("../img/burger-close.svg") no-repeat;
+
+    &--feedback, &--order {
+        @media (min-width: 576px) {
+            position: absolute;
+            top: 48px;
+            left: -64px;
+        }
+    }
+
+    &--menu {
+        @media (min-width: 1120px) {
+            display: none;
+        }
+    }
+}
+
+.menu-icon {
+    background-image: url("../img/menu.svg");
+}
+
+.phone-icon {
+    background-image: url("../img/phone.svg");
+}
+
+.msg-icon {
+    background-image: url("../img/chat.svg");
+}
+
+.profile-icon {
+    background-image: url("../img/profile.svg");
+
+    &--divider {
+        padding-right: 56px;
+        background: url("../img/profile.svg") no-repeat, url("../img/divider.svg") 100% 50% no-repeat transparent;
+    }
+}
+
+.service-icon {
+    font-family: "TT Lakes", serif;
+    font-weight: 500;
+    font-size: 0;
+    background: url("../img/service.svg") no-repeat;
+}
+
+.search-icon {
+    font-family: "TT Lakes", serif;
+    font-weight: 500;
+    font-size: 0;
+    background: url("../img/checkstatus.svg") no-repeat;
+}
+
+
+

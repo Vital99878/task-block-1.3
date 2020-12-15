@@ -26,7 +26,6 @@ more_btn__technics.addEventListener('click', function ( ) {
 
   let text = more_btn__technics.textContent;
 
-
   if (text === "Показать все") {
     more_btn__technics.textContent = "Скрыть";
     more_btn__technics.classList.add("rotate");
