@@ -37,15 +37,14 @@ menu__modal.addEventListener("click", function (  ) {
 
 feedback__msg.addEventListener('click', function ( ) {
   modal__msg.style.transform = "translateX(0)";
-//  body.style.overflow= "hidden"
 })
 
 modal__msg.addEventListener('click', function ( ) {
-  modal__msg.style.transform = "translateX(100%)";
+  modal__msg.style.transform = "translateX(120%)";
 })
 
 modal__msg.addEventListener('click', function ( ) {
-  modal__msg.style.transform = "translateX(100%)";
+  modal__msg.style.transform = "translateX(120%)";
 })
 
 // FEEDBACK CALL
@@ -55,12 +54,12 @@ call__icon.addEventListener('click', function ( ) {
 })
 modal__call.addEventListener('click', function ( ) {
   console.log("phone")
-  modal__call.style.transform = "translateX(100%)";
+  modal__call.style.transform = "translateX(120%)";
 })
 
 menu__close__phone.addEventListener('click', function ( ) {
   console.log("menu__close__phone")
-  modal__call.style.transform = "translateX(100%)";
+  modal__call.style.transform = "translateX(120%)";
 })
 
 

@@ -664,8 +664,8 @@ body {
       text-align: right; }
   @media (max-width: 600px) {
     .footer {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      display: flex;
+      flex-direction: column;
       padding: 16px; }
       .footer .footer__content:not(:last-child) {
         margin-bottom: 16px; }
@@ -791,7 +791,7 @@ body {
   max-width: 1440px;
   min-height: 676px;
   z-index: 20;
-  transform: translateX(100%);
+  transform: translateX(120%);
   margin: 0 auto;
   transition: all 1s; }
 
