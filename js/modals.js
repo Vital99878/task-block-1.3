@@ -11,35 +11,15 @@ let menu__close__phone = document.querySelector ('.close-icon--order');
 let modal__call = document.querySelector ('.modal-feedback--call');
 const b = document.querySelector ("body");
 
-// Menu
+// Открыть меню
 menu__icon.addEventListener ('click', function () {
-  console.log ("menu")
   menu__modal.style.transform = "translateX(0)";
-
 })
 
+// Закрытие по иконке
 menu__close.addEventListener ('click', function () {
   menu__modal.style.transform = "translateX(-100%)";
 })
-menu__modal.addEventListener ('click', function () {
-  menu__modal.style.transform = "translateX(-100%)";
-
-})
-
-function add_listener ( icons, body ) {
-  for (let i = 0; i < icons.length; i++) {
-    icons[i].addEventListener ('click', function () {
-
-      document.querySelector ("body").style.overflowY = "hidden";
-      body.style.transform = "translateX(0)";
-    })
-  }
-}
-
-// MODAL CALL
-add_listener (call__icons, modal__call)
-
-// Закрытие по иконке
 menu__close__phone.addEventListener ('click', function () {
   modal__call.style.transform = "translateX(120%)";
 })
@@ -47,7 +27,7 @@ close_icon_feedback.addEventListener ('click', function () {
   feedback_body.style.transform = "translateX(120%)";
 })
 
-// Закрытие по боди
+// Закрытие по клику на блюре модального окна
 function close_modal_blur ( evt ) {
   let element = evt.target
   evt.preventDefault ();
@@ -62,15 +42,28 @@ function close_modal_blur ( evt ) {
     modal__call.style.transform = "translateX(120%)";
   }
 
+  let check_class__menu = element.classList.contains ('modal-menu');
+  if (check_class__menu) {
+    menu__modal.style.transform = "translateX(-100%)";
+  }
 }
 
 modal__call.addEventListener ('click', close_modal_blur)
 feedback_body.addEventListener ('click', close_modal_blur)
+menu__modal.addEventListener ('click', close_modal_blur)
 
- // Добавляет новые функции
+// Добавляет EventListener на все иконки с одинаковыми классами.
+function add_listener ( icons, body ) {
+  for (let i = 0; i < icons.length; i++) {
+    icons[i].addEventListener ('click', function () {
+      document.querySelector ("body").style.overflowY = "hidden";
+      body.style.transform = "translateX(0)";
+    })
+  }
+}
+
 add_listener (msg_icons, feedback_body)
-
-
+add_listener (call__icons, modal__call)
 
 
 
