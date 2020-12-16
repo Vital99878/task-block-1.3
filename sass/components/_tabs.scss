@@ -8,6 +8,10 @@
     padding-left: 36px;
     overflow-x: hidden;
 
+    @media (min-width: 320px) and (max-width: 575px) {
+        margin-bottom: 0;
+    }
+
     &__tab {
         list-style: none;
         margin-left: -3px;
@@ -36,9 +40,7 @@
         padding: 6px 16px;
         overflow-x: scroll;
     }
-    @media (max-width: 1439px) {
-        margin-bottom: 16px;
-    }
+
     @media (min-width: 1440px) {
             flex-wrap: wrap;
             overflow-x: visible;
