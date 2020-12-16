@@ -9,7 +9,7 @@ let feedback_body = document.querySelector ('.modal-feedback--msg');
 let call__icons = document.querySelectorAll ('.phone-icon');
 let menu__close__phone = document.querySelector ('.close-icon--order');
 let modal__call = document.querySelector ('.modal-feedback--call');
-const b = document.querySelector("body");
+const b = document.querySelector ("body");
 
 // Menu
 menu__icon.addEventListener ('click', function () {
@@ -24,34 +24,52 @@ menu__close.addEventListener ('click', function () {
 menu__modal.addEventListener ('click', function () {
   menu__modal.style.transform = "translateX(-100%)";
 
-
 })
 
-function add_listener (icons, body) {
+function add_listener ( icons, body ) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
 
-      document.querySelector("body").style.overflowY = "hidden";
-//      body.style.display = "block";
+      document.querySelector ("body").style.overflowY = "hidden";
       body.style.transform = "translateX(0)";
     })
   }
 }
 
-add_listener(call__icons, modal__call)
-add_listener(msg_icons, feedback_body)
+// MODAL CALL
+add_listener (call__icons, modal__call)
 
-close_icon_feedback.addEventListener ('click', function () {
-  console.log('close feedback')
-  feedback_body.style.transform = "translateX(120%)";
-//  feedback_body.style.display = "none";
-})
-
+// Закрытие по иконке
 menu__close__phone.addEventListener ('click', function () {
-
   modal__call.style.transform = "translateX(120%)";
-//  modal__call.style.display = "none";
 })
+close_icon_feedback.addEventListener ('click', function () {
+  feedback_body.style.transform = "translateX(120%)";
+})
+
+// Закрытие по боди
+function close_modal_blur ( evt ) {
+  let element = evt.target
+  evt.preventDefault ();
+
+  let check_class__feedback = element.classList.contains ('modal-feedback--msg');
+  if (check_class__feedback) {
+    feedback_body.style.transform = "translateX(120%)";
+  }
+
+  let check_class__order = element.classList.contains ('modal-feedback--call');
+  if (check_class__order) {
+    modal__call.style.transform = "translateX(120%)";
+  }
+
+}
+
+modal__call.addEventListener ('click', close_modal_blur)
+feedback_body.addEventListener ('click', close_modal_blur)
+
+ // Добавляет новые функции
+add_listener (msg_icons, feedback_body)
+
 
 
 
