@@ -84,6 +84,22 @@
   .icons .header__icon:nth-child(3),
   .icons img {
     display: none; }
+  .header__icon:nth-child(4) {
+    width: 190px;
+    white-space: nowrap;
+    content: 'Статус ремонта';
+    font-family: "TT Lakes", serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 48px; }
+  .header__icon:nth-child(5) {
+    width: 190px;
+    white-space: nowrap;
+    content: 'Оставить заявку';
+    font-family: "TT Lakes", serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 48px; }
   .icons .header__icon:nth-child(4), .icons .header__icon:nth-child(5) {
     background-position: 100% 50%;
     font-size: 16px;
@@ -764,7 +780,7 @@
 .close-icon, .menu-icon, .phone-icon, .msg-icon, .profile-icon, .service-icon, .search-icon {
   border: none;
   height: 40px;
-  padding-right: 40px;
+  width: 40px;
   background-color: transparent;
   cursor: pointer;
   transition: all .4s; }
@@ -799,15 +815,9 @@
     background: url("../img/profile.svg") no-repeat, url("../img/divider.svg") 100% 50% no-repeat transparent; }
 
 .service-icon {
-  font-family: "TT Lakes", serif;
-  font-weight: 500;
-  font-size: 0;
   background: url("../img/service.svg") no-repeat; }
 
 .search-icon {
-  font-family: "TT Lakes", serif;
-  font-weight: 500;
-  font-size: 0;
   background: url("../img/checkstatus.svg") no-repeat; }
 
 @media (min-width: 1440px) {

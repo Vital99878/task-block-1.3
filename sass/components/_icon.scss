@@ -3,7 +3,7 @@
 @mixin icon {
     border: none;
     height: 40px;
-    padding-right: 40px;
+    width: 40px;
     background-color: transparent;
     cursor: pointer;
     transition: all .4s;
@@ -59,16 +59,10 @@
 }
 
 .service-icon {
-    font-family: "TT Lakes", serif;
-    font-weight: 500;
-    font-size: 0;
     background: url("../img/service.svg") no-repeat;
 }
 
 .search-icon {
-    font-family: "TT Lakes", serif;
-    font-weight: 500;
-    font-size: 0;
     background: url("../img/checkstatus.svg") no-repeat;
 }
 

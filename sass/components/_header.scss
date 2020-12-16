@@ -107,6 +107,25 @@
     .icons img {
         display: none;
     }
+    .header__icon:nth-child(4) {
+        width: 190px;
+        white-space: nowrap;
+        content: 'Статус ремонта';
+        font-family: "TT Lakes", serif;
+        font-weight: 500;
+        font-size: 16px;
+        padding-left: 48px;
+    }
+    .header__icon:nth-child(5) {
+        width: 190px;
+        white-space: nowrap;
+        content: 'Оставить заявку';
+        font-family: "TT Lakes", serif;
+        font-weight: 500;
+        font-size: 16px;
+        padding-left: 48px;
+    }
+
 
     .icons .header__icon:nth-child(4), .icons .header__icon:nth-child(5) {
         background-position: 100% 50%;
