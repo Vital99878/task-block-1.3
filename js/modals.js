@@ -9,7 +9,7 @@ let feedback_body = document.querySelector ('.modal-feedback--msg');
 let call__icons = document.querySelectorAll ('.phone-icon');
 let menu__close__phone = document.querySelector ('.close-icon--order');
 let modal__call = document.querySelector ('.modal-feedback--call');
-const body = document.querySelector("body");
+const b = document.querySelector("body");
 
 // Menu
 menu__icon.addEventListener ('click', function () {
@@ -25,6 +25,8 @@ menu__close.addEventListener ('click', function () {
 function add_listener (icons, body) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
+
+      document.querySelector("body").style.overflowY = "hidden";
       body.style.display = "block";
       body.style.transform = "translateX(0)";
     })
@@ -44,10 +46,6 @@ menu__close__phone.addEventListener ('click', function () {
   modal__call.style.transform = "translateX(120%)";
   modal__call.style.display = "none";
 })
-
-
-
-
 
 
 

@@ -16,7 +16,7 @@
         align-items: center;
 
         > * {
-            margin-right: 16px;
+            margin-right: 12px;
         }
     }
 
@@ -26,7 +26,7 @@
         font-size: 0;
 
         > *:not(:last-child) {
-            margin-right: 16px;
+            margin-right: 12px;
         }
 
         button {
@@ -37,11 +37,11 @@
 
     &__logo {
         @media (max-width: 768px) {
-            padding-right: 16px;
+            padding-right: 12px;
             background: url("../img/divider.svg") 100% 50% no-repeat;
         }
         @media (min-width: 769px) {
-            padding-left: 16px;
+            padding-left: 12px;
             background: url("../img/divider.svg") 0 50% no-repeat;
         }
     }
