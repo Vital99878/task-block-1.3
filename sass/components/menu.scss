@@ -1,13 +1,15 @@
 @import "../abstracts/variables";
 
 .modal-menu {
-    position: absolute;
+    position: fixed;
     transition-property: transform;
     transition: all 1s;
     background: rgba(255, 255, 255, 0.5) 100% 100%;
     width: 100vw;
-    height: 780px;
+    height: 100vh;
     z-index: 10;
+    overflow-y: scroll;
+
 
     @media  (min-width: 1440px) {
         background-color: #FFFFFF;
@@ -41,6 +43,7 @@
         height: 100%;
         grid-column: 1/2;
         grid-row: 1/ 4;
+        overflow-y: hidden;
     }
 
     @media (max-width: 1439px) {

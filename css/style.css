@@ -132,13 +132,14 @@
     padding-left: 16px; } }
 
 .modal-menu {
-  position: absolute;
+  position: fixed;
   transition-property: transform;
   transition: all 1s;
   background: rgba(255, 255, 255, 0.5) 100% 100%;
   width: 100vw;
-  height: 780px;
-  z-index: 10; }
+  height: 100vh;
+  z-index: 10;
+  overflow-y: scroll; }
   @media (min-width: 1440px) {
     .modal-menu {
       background-color: #FFFFFF; } }
@@ -160,7 +161,8 @@
       width: 320px;
       height: 100%;
       grid-column: 1/2;
-      grid-row: 1/ 4; } }
+      grid-row: 1/ 4;
+      overflow-y: hidden; } }
   @media (max-width: 1439px) {
     .modal-menu {
       transform: translateX(-100%); } }
@@ -454,13 +456,14 @@
     grid-column-gap: 32px; } }
 
 .modal-menu {
-  position: absolute;
+  position: fixed;
   transition-property: transform;
   transition: all 1s;
   background: rgba(255, 255, 255, 0.5) 100% 100%;
   width: 100vw;
-  height: 780px;
-  z-index: 10; }
+  height: 100vh;
+  z-index: 10;
+  overflow-y: scroll; }
   @media (min-width: 1440px) {
     .modal-menu {
       background-color: #FFFFFF; } }
@@ -482,7 +485,8 @@
       width: 320px;
       height: 100%;
       grid-column: 1/2;
-      grid-row: 1/ 4; } }
+      grid-row: 1/ 4;
+      overflow-y: hidden; } }
   @media (max-width: 1439px) {
     .modal-menu {
       transform: translateX(-100%); } }
@@ -704,11 +708,14 @@
 
 .modal-feedback {
   position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
   background-color: rgba(255, 255, 255, 0.96);
   width: 100%;
-  height: 940px;
+  height: 100vh;
   max-width: 1440px;
-  overflow-y: visible;
+  overflow-y: scroll;
   min-height: 676px;
   z-index: 20;
   transform: translateX(120%);
