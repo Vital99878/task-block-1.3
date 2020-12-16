@@ -615,7 +615,8 @@
   color: #FFFFFF;
   border: none;
   text-transform: uppercase;
-  transition: all .4s ease-in-out; }
+  transition-property: transform;
+  transition: all 1s ease-in-out; }
   .order:hover {
     filter: hue-rotate(25deg);
     transform: scale(1.02);
@@ -701,8 +702,7 @@
   .swiper-container--hide-576 {
     display: none; } }
 
-.bg_form {
-  display: none;
+.modal-feedback {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.96);
   width: 100%;

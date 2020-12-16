@@ -15,7 +15,8 @@
     color: #FFFFFF;
     border: none;
     text-transform: uppercase;
-    transition: all .4s ease-in-out;
+    transition-property: transform;
+    transition: all 1s ease-in-out;
 
     &:hover {
         filter: hue-rotate(25deg);

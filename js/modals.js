@@ -21,13 +21,18 @@ menu__icon.addEventListener ('click', function () {
 menu__close.addEventListener ('click', function () {
   menu__modal.style.transform = "translateX(-100%)";
 })
+menu__modal.addEventListener ('click', function () {
+  menu__modal.style.transform = "translateX(-100%)";
+
+
+})
 
 function add_listener (icons, body) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
 
       document.querySelector("body").style.overflowY = "hidden";
-      body.style.display = "block";
+//      body.style.display = "block";
       body.style.transform = "translateX(0)";
     })
   }
@@ -37,14 +42,15 @@ add_listener(call__icons, modal__call)
 add_listener(msg_icons, feedback_body)
 
 close_icon_feedback.addEventListener ('click', function () {
+  console.log('close feedback')
   feedback_body.style.transform = "translateX(120%)";
-  feedback_body.style.display = "none";
+//  feedback_body.style.display = "none";
 })
 
 menu__close__phone.addEventListener ('click', function () {
 
   modal__call.style.transform = "translateX(120%)";
-  modal__call.style.display = "none";
+//  modal__call.style.display = "none";
 })
 
 
