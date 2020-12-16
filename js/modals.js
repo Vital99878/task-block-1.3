@@ -9,13 +9,13 @@ let feedback_body = document.querySelector ('.modal-feedback--msg');
 let call__icons = document.querySelectorAll ('.phone-icon');
 let menu__close__phone = document.querySelector ('.close-icon--order');
 let modal__call = document.querySelector ('.modal-feedback--call');
+const body = document.querySelector("body");
 
 // Menu
 menu__icon.addEventListener ('click', function () {
   console.log ("menu")
   menu__modal.style.transform = "translateX(0)";
 
-//  body.style.overflow= "scroll"
 })
 
 menu__close.addEventListener ('click', function () {

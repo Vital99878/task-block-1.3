@@ -9,22 +9,10 @@
     padding-left: 32px;
     margin: 20px 0;
 
-    &--pos-ml {
-        margin-left: -16px;
-        margin-bottom: 24px;
-        margin-top: 0;
-    }
-
-    &--view-m {
-        margin-left: -24px;
-        padding-left: 20px;
-    }
-
 }
 
 
 @media (min-width: 320px) and (max-width: 768px) {
-
     header .page-heading {
         display: none;
     }
@@ -56,13 +44,7 @@
 
 @media (min-width: 1120px) {
 
-    .header {
-        padding: 0 16px;
-        text-align: end;
-        background-color: $color-bg-main;
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
+
     main .page-heading {
         display: none;
     }

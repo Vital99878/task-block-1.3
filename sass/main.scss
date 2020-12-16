@@ -33,12 +33,14 @@ body {
     z-index: 15;
     overflow-x: hidden;
 
-    main {
-        display: flex;
-        flex-direction: column;
-        background-color: $color-bg-main;
-        border-top: 1px solid $color-main-top-line;
-    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-main;
+    border-top: 1px solid $color-main-top-line;
 }
 
 @media (max-width: 1119px) {
@@ -50,11 +52,13 @@ body {
 @media (min-width: 1120px) {
     body {
         display: grid;
-        grid-template-columns: 320px 1fr;
-        grid-template-rows: 68px 1fr;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content 1fr;
         background-color: #F8F8F8;
-        margin: 30px auto;
         width: 1440px;
+    }
+    main {
+        border-top: none;
     }
 }
 

@@ -39,26 +39,58 @@ more_btn__technics.addEventListener('click', function ( ) {
 
 })
 
+const swiper_container = document.querySelector('.swiper-container')
 
-const mySwiper = new Swiper('.swiper-container', {
+let swiper;
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+function swiper_575 () {
+  if (window.innerWidth <= "575" && swiper_container.dataset.mobile === "false" ) {
 
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-  spaceBetween: 16,
-  slidesPerView: 1.3,
+    swiper = new Swiper('.swiper-container', {
 
-//  spaceBetween: 30
-})
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
 
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      spaceBetween: 16,
+      slidesPerView: 1.3,
 
-if(window.innerWidth >= 576) {
-  mySwiper.destroy(true, true);
-  console.log("destroy")
+    })
+
+    swiper_container.dataset.mobile = "true"
+
+  }
+
+  else  {
+    swiper_container.dataset.mobile = "false"
+    swiper.destroy()
+  }
 }
+
+swiper_575()
+
+window.addEventListener ('resize', swiper_575)
+
+//const mySwiper = new Swiper('.swiper-container', {
+//
+//  pagination: {
+//    el: '.swiper-pagination',
+//    clickable: true,
+//  },
+//
+//  scrollbar: {
+//    el: '.swiper-scrollbar',
+//  },
+//  spaceBetween: 16,
+//  slidesPerView: 1.3,
+//
+////  spaceBetween: 30
+//})
+
+
+
 

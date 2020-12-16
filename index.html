@@ -86,9 +86,9 @@
     </div>
 
     <div class="header__icons">
-        <button class="header__icon phone-icon"></button>
-        <button class="header__icon msg-icon"></button>
-        <button class="header__icon profile-icon profile-icon--divider"></button>
+        <button class="header__icon phone-icon phone-icon--hidden-xl"></button>
+        <button class="header__icon msg-icon msg-icon--hidden-xl"></button>
+        <button class="header__icon profile-icon profile-icon--divider profile-icon--hidden-xl"></button>
         <button class="header__icon service-icon">Оставить заявку</button>
         <button class="header__icon search-icon">Статус ремонта</button>
     </div>
@@ -124,7 +124,7 @@
     <section class="service">
         <h2 class="service__title">Ремонт техники различных брендов</h2>
 
-        <div class="swiper-container">
+        <div class="swiper-container" data-mobile="false">
             <ul class="swiper-wrapper service__list service__list--brands">
                 <li class="swiper-slide service__brand"><a href=""><img src="img/lenovo.svg" alt="Lenovo"></a></li>
                 <li class="swiper-slide service__brand"><a href=""><img src="img/samsung.svg" alt="Samsung"></a></li>
@@ -147,7 +147,7 @@
 
     <section class="service">
         <h2 class="service__title">Ремонт различных видов техники</h2>
-        <div class="swiper-container">
+        <div class="swiper-container" data-mobile="false">
             <ul class="swiper-wrapper service__list service__list--technics">
                 <li class="swiper-slide service__technic"><a href="">Ремонт ноутбуков</a></li>
                 <li class="swiper-slide service__technic"><a href="">Ремонт планшетов</a></li>
@@ -208,7 +208,7 @@
             </li>
         </ul>
 
-        <div class="swiper-container swiper-container--hide-576">
+        <div class="swiper-container swiper-container--hide-576" data-mobile="false">
             <ul class="swiper-wrapper service__list">
                 <li class="swiper-slide service__price-card price-card">
                     <div>
