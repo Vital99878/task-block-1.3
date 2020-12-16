@@ -29,10 +29,10 @@
             margin-right: 12px;
         }
 
-        button {
-            font-size: 0;
-            white-space: nowrap;
-        }
+    }
+    &__icon {
+        font-size: 0;
+        white-space: nowrap;
     }
 
     &__logo {
@@ -107,16 +107,7 @@
     .icons img {
         display: none;
     }
-    .icons .header__icon:nth-child(4), .icons .header__icon:nth-child(5) {
-        background-position: 100% 50%;
-        font-size: 16px;
-        font-weight: 500;
-        color: black;
-        padding-right: 46px;
-    }
-
-
-    .icons .header__icon:nth-child(4), .icons .header__icon:nth-child(5) {
+    .header__icon:nth-child(4), .header__icon:nth-child(5) {
         background-position: 100% 50%;
         font-size: 16px;
         font-weight: 500;
