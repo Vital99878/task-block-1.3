@@ -46,7 +46,7 @@
         }
     }
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
         background-color: $color-bg-main;
         grid-column: 2/3;
         grid-row: 1/2;
@@ -69,7 +69,7 @@
     }
 }
 
-@media (max-width: 1119px) {
+@media (max-width: 1339px) {
 
     .header .logo {
         padding-right: 0;
@@ -88,7 +88,7 @@
 
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
     .header--p-main {
         padding: 0;
     }

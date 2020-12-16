@@ -43,13 +43,13 @@ main {
     border-top: 1px solid $color-main-top-line;
 }
 
-@media (max-width: 1119px) {
+@media (max-width: 1439px) {
     body {
         position: relative;
     }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
     body {
         display: grid;
         grid-template-columns: min-content 1fr;
