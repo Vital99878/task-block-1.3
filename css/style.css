@@ -720,7 +720,9 @@
   z-index: 20;
   transform: translateX(120%);
   margin: 0 auto;
-  transition: all 1s; }
+  transition-property: top, transform;
+  transition-delay: 0s, .2s;
+  transition: .1s, 1s; }
 
 .feedback {
   position: absolute;

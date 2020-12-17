@@ -63,12 +63,21 @@ feedback_body.addEventListener ('click', close_modal_blur)
 menu__modal.addEventListener ('click', close_modal_blur)
 
 // Добавляет EventListener для открытия модальных окон (кроме меню) на все иконки с одинаковыми классами.
+
 function add_listener__open_modal ( icons, modal ) {
+
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
-      html__body.style.overflowY = "hidden";
-      modal.style.transform = "translateX(0)";
+
+      const margin_left_body = window.getComputedStyle (html__body, null)
+                            .getPropertyValue ("margin-left");
+
+      const top = window.pageYOffset;
+      const ofsset_ml = `translateX(${margin_left_body})`
       modal.style.visibility = "visible";
+      html__body.style.overflowY = "hidden";
+      modal.style.top = `${top}px`;
+      modal.style.transform = ofsset_ml;
 
     })
   }
@@ -76,6 +85,8 @@ function add_listener__open_modal ( icons, modal ) {
 
 add_listener__open_modal (msg_icons, feedback_body)
 add_listener__open_modal (call__icons, modal__call)
+
+//todo сделать чтобы модальное окно выплывало по центру экран независимо от положения на страннице
 
 
 
