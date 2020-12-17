@@ -52,7 +52,7 @@
         grid-row: 1/2;
         padding: 0 16px;
         text-align: end;
-        margin-top: 22px;
+        margin-top: 31px;
     }
 
 }
@@ -70,6 +70,10 @@
 }
 
 @media (max-width: 1339px) {
+    .header {
+        background-color: $color-bg-nav;
+        height: 66px;
+    }
 
     .header .logo {
         padding-right: 0;

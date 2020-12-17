@@ -4,13 +4,22 @@
     font-family: "TT Lakes", serif;
     font-weight: 700;
     display: inline-block;
-    background: url("../img/highlight.svg") no-repeat;
+    background: url("../img/highlight.svg") no-repeat 0 50%;
     font-size: 28px;
     padding-left: 32px;
 
+
+    @media (max-width: 768px) {
+        padding-left: 12px;
+    }
+    @media (max-width: 1439px) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
     @media (min-width: 1440px) {
         grid-row: 1/ 2;
         grid-column: 2/ 3;
+        margin-top: 31px;
     }
 
 }
@@ -29,21 +38,7 @@
 
 }
 
-@media (max-width: 1439px) {
 
-    .header {
-        background-color: $color-bg-nav;
-        height: 66px;
-    }
-
-    main .page-heading {
-        display: flex;
-    }
-
-
-
-
-}
 
 
 
