@@ -48,7 +48,7 @@
   @media (min-width: 1440px) {
     .header {
       background-color: #F8F8F8;
-      grid-column: 2/3;
+      grid-column: 3/4;
       grid-row: 1/2;
       padding: 0 16px;
       text-align: end;
@@ -99,8 +99,11 @@
   display: inline-block;
   background: url("../img/highlight.svg") no-repeat;
   font-size: 28px;
-  padding-left: 32px;
-  margin: 20px 0; }
+  padding-left: 32px; }
+  @media (min-width: 1440px) {
+    .page-heading {
+      grid-row: 1/ 2;
+      grid-column: 2/ 3; } }
 
 @media (min-width: 320px) and (max-width: 768px) {
   header .page-heading {
@@ -113,14 +116,8 @@
   .header {
     background-color: white;
     height: 66px; }
-  .header .page-heading {
-    display: none; }
   main .page-heading {
     display: flex; } }
-
-@media (min-width: 1440px) {
-  main .page-heading {
-    display: none; } }
 
 @media (min-width: 576px) {
   .page-header--modal {
@@ -867,4 +864,5 @@ main {
     background-color: #F8F8F8;
     width: 1440px; }
   main {
-    border-top: none; } }
+    border-top: none;
+    grid-column: 2/4; } }
