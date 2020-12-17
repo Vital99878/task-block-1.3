@@ -17,9 +17,10 @@
         padding-bottom: 24px;
     }
     @media (min-width: 1440px) {
+        height: 40px;
+        margin-top: 31px;
         grid-row: 1/ 2;
         grid-column: 2/ 3;
-        margin-top: 31px;
     }
 
 }
