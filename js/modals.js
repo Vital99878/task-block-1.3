@@ -2,9 +2,9 @@ let menu__icon = document.querySelector ('.menu-icon');
 let menu__close = document.querySelector ('.close-icon--menu');
 let menu__modal = document.querySelector ('.modal-menu');
 
-let msg_icons = document.querySelectorAll ('.msg-icon');
+let message_icons = document.querySelectorAll ('.message-icon');
 let close_icon_feedback = document.querySelector ('.close-icon--feedback');
-let feedback_body = document.querySelector ('.modal-feedback--msg');
+let feedback_body = document.querySelector ('.modal-feedback--message');
 
 let call__icons = document.querySelectorAll ('.phone-icon');
 let menu__close__phone = document.querySelector ('.close-icon--order');
@@ -36,7 +36,7 @@ function close_modal_blur ( evt ) {
   let element = evt.target
   evt.preventDefault ();
 
-  let check_class__feedback = element.classList.contains ('modal-feedback--msg');
+  let check_class__feedback = element.classList.contains ('modal-feedback--message');
   if (check_class__feedback) {
     feedback_body.style.transform = "translateX(120%)";
     element.style.visibility = "hidden";
@@ -83,7 +83,7 @@ function add_listener__open_modal ( icons, modal ) {
   }
 }
 
-add_listener__open_modal (msg_icons, feedback_body)
+add_listener__open_modal (message_icons, feedback_body)
 add_listener__open_modal (call__icons, modal__call)
 
 //todo сделать чтобы модальное окно выплывало по центру экран независимо от положения на страннице

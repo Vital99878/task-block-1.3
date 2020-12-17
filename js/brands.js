@@ -4,8 +4,7 @@ let list_brands = document.querySelector('.service__list--brands');
 let list_technics = document.querySelector('.service__list--technics');
 
 
-more_btn__brands.addEventListener('click', function (evt ) {
-  console.log(evt.target)
+more_btn__brands.addEventListener('click', function ( ) {
   let text = more_btn__brands.textContent;
 
   if (text === "Показать все") {
@@ -22,7 +21,6 @@ more_btn__brands.addEventListener('click', function (evt ) {
 })
 
 more_btn__technics.addEventListener('click', function ( ) {
-  console.log('tech')
 
   let text = more_btn__technics.textContent;
 
@@ -75,21 +73,7 @@ swiper_575()
 
 window.addEventListener ('resize', swiper_575)
 
-//const mySwiper = new Swiper('.swiper-container', {
-//
-//  pagination: {
-//    el: '.swiper-pagination',
-//    clickable: true,
-//  },
-//
-//  scrollbar: {
-//    el: '.swiper-scrollbar',
-//  },
-//  spaceBetween: 16,
-//  slidesPerView: 1.3,
-//
-////  spaceBetween: 30
-//})
+
 
 
 

@@ -9,7 +9,7 @@
     transition: all .4s;
 }
 
-.close-icon, .menu-icon, .phone-icon, .msg-icon, .profile-icon, .service-icon, .search-icon {
+.close-icon, .menu-icon, .phone-icon, .message-icon, .profile-icon, .service-icon, .search-icon {
     @include icon;
 
     &:hover {
@@ -45,7 +45,7 @@
     background-image: url("../img/phone.svg");
 }
 
-.msg-icon {
+.message-icon {
     background-image: url("../img/chat.svg");
 }
 
@@ -68,7 +68,7 @@
 
 
 @media (min-width: 1440px) {
-    .phone-icon--hidden-xl, .msg-icon--hidden-xl, .profile-icon--hidden-xl {
+    .phone-icon--hidden-xl, .message-icon--hidden-xl, .profile-icon--hidden-xl {
          display: none;
     }
 }

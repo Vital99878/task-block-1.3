@@ -783,14 +783,14 @@
     left: -64px;
     top: 50px; } }
 
-.close-icon, .menu-icon, .phone-icon, .msg-icon, .profile-icon, .service-icon, .search-icon {
+.close-icon, .menu-icon, .phone-icon, .message-icon, .profile-icon, .service-icon, .search-icon {
   border: none;
   min-width: 40px;
   height: 40px;
   background-color: transparent;
   cursor: pointer;
   transition: all .4s; }
-  .close-icon:hover, .menu-icon:hover, .phone-icon:hover, .msg-icon:hover, .profile-icon:hover, .service-icon:hover, .search-icon:hover {
+  .close-icon:hover, .menu-icon:hover, .phone-icon:hover, .message-icon:hover, .profile-icon:hover, .service-icon:hover, .search-icon:hover {
     filter: hue-rotate(25deg);
     transform: scale(1.05); }
 
@@ -811,7 +811,7 @@
 .phone-icon {
   background-image: url("../img/phone.svg"); }
 
-.msg-icon {
+.message-icon {
   background-image: url("../img/chat.svg"); }
 
 .profile-icon {
@@ -827,7 +827,7 @@
   background: url("../img/checkstatus.svg") no-repeat; }
 
 @media (min-width: 1440px) {
-  .phone-icon--hidden-xl, .msg-icon--hidden-xl, .profile-icon--hidden-xl {
+  .phone-icon--hidden-xl, .message-icon--hidden-xl, .profile-icon--hidden-xl {
     display: none; } }
 
 *,
@@ -836,6 +836,9 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit; }
+
+html {
+  overflow-x: hidden; }
 
 body {
   font-family: "TT Lakes", serif;

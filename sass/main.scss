@@ -24,6 +24,9 @@
     box-sizing: inherit;
 }
 
+html {
+    overflow-x: hidden ;
+}
 body {
     font-family: "TT Lakes", serif;
     font-weight: 400;
@@ -32,8 +35,6 @@ body {
     margin: 0 auto;
     z-index: 15;
     overflow-x: hidden;
-
-
 }
 
 main {
