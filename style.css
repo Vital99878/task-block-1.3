@@ -2,17 +2,17 @@
 @font-face {
   font-family: "TT Lakes";
   font-weight: normal;
-  src: url("../fonts/TTLakes-Regular.woff"), url("../fonts/TTLakes-Regular.eot"), url("../fonts/TTLakes-Regular.ttf"); }
+  src: url(./fonts/TTLakes-Regular.woff), url(./fonts/TTLakes-Regular.eot), url(./fonts/TTLakes-Regular.ttf); }
 
 @font-face {
   font-family: "TT Lakes";
   font-weight: 700;
-  src: url("../fonts/TTLakes-Bold.woff"), url("../fonts/TTLakes-Bold.eot"), url("../fonts/TTLakes-Bold.ttf"); }
+  src: url(./fonts/TTLakes-Bold.woff), url(./fonts/TTLakes-Bold.eot), url(./fonts/TTLakes-Bold.ttf); }
 
 @font-face {
   font-family: "TT Lakes";
   font-weight: 500;
-  src: url("../fonts/TTLakes-Medium.woff"), url("../fonts/TTLakes-Medium.eot"), url("../fonts/TTLakes-Medium.ttf"); }
+  src: url(./fonts/TTLakes-Medium.woff), url(./fonts/TTLakes-Medium.eot), url(./fonts/TTLakes-Medium.ttf); }
 
 .header {
   display: flex;
@@ -40,11 +40,11 @@
   @media (max-width: 768px) {
     .header__logo {
       padding-right: 12px;
-      background: url("../img/divider.svg") 100% 50% no-repeat; } }
+      background: url(./static/divider.svg) 100% 50% no-repeat; } }
   @media (min-width: 769px) {
     .header__logo {
       padding-left: 12px;
-      background: url("../img/divider.svg") 0 50% no-repeat; } }
+      background: url(./static/divider.svg) 0 50% no-repeat; } }
   @media (min-width: 1440px) {
     .header {
       background-color: #F8F8F8;
@@ -67,7 +67,7 @@
   .header .logo {
     padding-right: 0;
     padding-left: 16px;
-    background: url("../img/divider.svg") 0 50% no-repeat; }
+    background: url(./static/divider.svg) 0 50% no-repeat; }
   .icons {
     display: flex; }
   .menu, .icons {
@@ -75,6 +75,8 @@
     justify-content: space-evenly; } }
 
 @media (min-width: 1440px) {
+  .header {
+    padding-right: 16px; }
   .header--p-main {
     padding: 0; }
   .header__menu {
@@ -100,7 +102,7 @@
   font-family: "TT Lakes", serif;
   font-weight: 700;
   display: inline-block;
-  background: url("../img/highlight.svg") no-repeat 0 50%;
+  background: url(./static/highlight.svg) no-repeat 0 50%;
   font-size: 28px;
   padding-left: 32px; }
   @media (max-width: 768px) {
@@ -213,7 +215,7 @@
       transition: all .4s; }
       .modal-menu .nav__link--active {
         height: 32px;
-        background: url("../img/highlight.svg") 0 0 no-repeat;
+        background: url(./static/highlight.svg) 0 0 no-repeat;
         background-size: 4px 32px;
         margin-bottom: 26px;
         padding-top: 6px;
@@ -345,7 +347,7 @@
   content: '';
   height: 11px;
   width: 8px;
-  background: url("../img/more.svg") no-repeat transparent;
+  background: url(./static/more.svg) no-repeat transparent;
   transform: translateY(-50%); }
 
 .more.rotate::before {
@@ -381,7 +383,7 @@
     box-sizing: border-box;
     position: relative;
     height: 72px;
-    background: url("../img/go.svg") no-repeat 93% 50% #FFFFFF;
+    background: url(./static/go.svg) no-repeat 93% 50% #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px; }
     .service__brand img {
@@ -393,7 +395,7 @@
     list-style: none;
     box-sizing: border-box;
     height: 160px;
-    background: url("../img/go.svg") no-repeat 93% 83% #FFFFFF;
+    background: url(./static/go.svg) no-repeat 93% 83% #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px; }
     .service__technic a {
@@ -543,7 +545,7 @@
       transition: all .4s; }
       .modal-menu .nav__link--active {
         height: 32px;
-        background: url("../img/highlight.svg") 0 0 no-repeat;
+        background: url(./static/highlight.svg) 0 0 no-repeat;
         background-size: 4px 32px;
         margin-bottom: 26px;
         padding-top: 6px;
@@ -578,41 +580,6 @@
     .modal-menu .lang-toggle .active {
       color: #7E7E82; }
 
-.footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid #D9FFF5; }
-  .footer__content {
-    font-size: 14px;
-    color: #7E7E82;
-    padding: 0 6px; }
-    .footer__content--align-left {
-      text-align: left; }
-    .footer__content--align-center {
-      text-align: center; }
-    .footer__content--align-right {
-      text-align: right; }
-  @media (max-width: 600px) {
-    .footer {
-      display: flex;
-      flex-direction: column;
-      padding: 16px; }
-      .footer .footer__content:not(:last-child) {
-        margin-bottom: 16px; }
-      .footer .footer__content--align-left,
-      .footer .footer__content--align-center,
-      .footer .footer__content--align-right {
-        text-align: center; } }
-  @media (max-width: 768px) {
-    .footer {
-      padding: 24px; } }
-  @media (min-width: 769px) {
-    .footer {
-      padding: 32px; } }
-  @media (min-width: 1440px) {
-    .footer {
-      grid-column: 2/ -1; } }
-
 /*<button class="order"><span>Заказать</span></button>*/
 .order {
   position: relative;
@@ -620,7 +587,7 @@
   height: 32px;
   font-family: "TT Lakes", serif;
   font-weight: 700;
-  background: url("../img/arrow__order.svg") no-repeat 88% 50% #FF3E79;
+  background: url(./static/arrow__order.svg) no-repeat 88% 50% #FF3E79;
   font-size: 12px;
   border-radius: 16px;
   cursor: pointer;
@@ -692,7 +659,7 @@
     padding-right: 16px;
     font-size: 16px;
     font-weight: 500;
-    background: url("../img/arrow-right.svg") no-repeat 100% 50%; }
+    background: url(./static/arrow-right.svg) no-repeat 100% 50%; }
     .price-list__info--offer:hover {
       cursor: pointer; }
   @media (min-width: 576px) {
@@ -778,7 +745,7 @@
   height: 40px;
   cursor: pointer;
   transition: all .4s;
-  background: url("../img/burger-close.svg") no-repeat transparent; }
+  background: url(./static/burger-close.svg) no-repeat transparent; }
   .close-modal--pos-my {
     margin-bottom: 32px; }
   .close-modal:hover {
@@ -803,7 +770,7 @@
     transform: scale(1.05); }
 
 .close-icon {
-  background: url("../img/burger-close.svg") no-repeat; }
+  background: url(./static/burger-close.svg) no-repeat; }
   @media (min-width: 576px) {
     .close-icon--feedback, .close-icon--order {
       position: absolute;
@@ -814,29 +781,64 @@
       display: none; } }
 
 .menu-icon {
-  background-image: url("../img/menu.svg"); }
+  background-image: url(./static/menu.svg); }
 
 .phone-icon {
-  background-image: url("../img/phone.svg"); }
+  background-image: url(./static/phone.svg); }
 
 .message-icon {
-  background-image: url("../img/chat.svg"); }
+  background-image: url(./static/chat.svg); }
 
 .profile-icon {
-  background-image: url("../img/profile.svg"); }
+  background-image: url(./static/profile.svg); }
   .profile-icon--divider {
     padding-right: 56px;
-    background: url("../img/profile.svg") no-repeat, url("../img/divider.svg") 100% 50% no-repeat transparent; }
+    background: url(./static/profile.svg) no-repeat, url(./static/divider.svg) 100% 50% no-repeat transparent; }
 
 .service-icon {
-  background: url("../img/service.svg") no-repeat; }
+  background: url(./static/service.svg) no-repeat; }
 
 .search-icon {
-  background: url("../img/checkstatus.svg") no-repeat; }
+  background: url(./static/checkstatus.svg) no-repeat; }
 
 @media (min-width: 1440px) {
   .phone-icon--hidden-xl, .message-icon--hidden-xl, .profile-icon--hidden-xl {
     display: none; } }
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #D9FFF5; }
+  .footer__content {
+    font-size: 14px;
+    color: #7E7E82;
+    padding: 0 6px; }
+    .footer__content--align-left {
+      text-align: left; }
+    .footer__content--align-center {
+      text-align: center; }
+    .footer__content--align-right {
+      text-align: right; }
+  @media (max-width: 600px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+      padding: 16px; }
+      .footer .footer__content:not(:last-child) {
+        margin-bottom: 16px; }
+      .footer .footer__content--align-left,
+      .footer .footer__content--align-center,
+      .footer .footer__content--align-right {
+        text-align: center; } }
+  @media (max-width: 768px) {
+    .footer {
+      padding: 24px; } }
+  @media (min-width: 769px) {
+    .footer {
+      padding: 32px; } }
+  @media (min-width: 1440px) {
+    .footer {
+      grid-column: 2/ 4; } }
 
 *,
 *::after,
@@ -870,10 +872,15 @@ main {
 @media (min-width: 1440px) {
   body {
     display: grid;
+    grid-template-columns: -webkit-min-content 1fr;
     grid-template-columns: min-content 1fr;
+    grid-template-rows: -webkit-min-content 1fr;
     grid-template-rows: min-content 1fr;
     background-color: #F8F8F8;
     width: 1440px; }
   main {
     border-top: none;
     grid-column: 2/4; } }
+
+
+/*# sourceMappingURL=style.css.map*/
