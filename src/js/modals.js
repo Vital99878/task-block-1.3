@@ -1,99 +1,72 @@
-let menu__icon = document.querySelector ('.menu-icon');
-let menu__close = document.querySelector ('.close-icon--menu');
-let menu__modal = document.querySelector ('.modal-menu');
+export let icon_menu = document.querySelector ('.menu-icon');
+export let icon__close_menu = document.querySelector ('.close-icon--menu');
+export let modal__menu = document.querySelector ('.modal-menu');
 
-let message_icons = document.querySelectorAll ('.message-icon');
-let close_icon_feedback = document.querySelector ('.close-icon--feedback');
-let feedback_body = document.querySelector ('.modal-feedback--message');
+export let icons__message = document.querySelectorAll ('.message-icon');
+export let icon__close_feedback = document.querySelector ('.close-icon--feedback');
+export let modal__feedback = document.querySelector ('.modal-feedback--message');
 
-let call__icons = document.querySelectorAll ('.phone-icon');
-let menu__close__phone = document.querySelector ('.close-icon--order');
-let modal__call = document.querySelector ('.modal-feedback--call');
-const html__body = document.querySelector ("body");
+export let icons__call = document.querySelectorAll ('.phone-icon');
+export let icon__close_phone = document.querySelector ('.close-icon--order');
+export let modal__phone = document.querySelector ('.modal-feedback--call');
+export const body = document.querySelector ("body");
 
-// Открыть меню
-menu__icon.addEventListener ('click', function () {
-  menu__modal.style.transform = "translateX(0)";
-  html__body.style.overflowY = "hidden";
-})
+// Добавляет EventListener для открытия модальных окон (кроме меню) на все иконки с одинаковыми классами.
+export function add_event_listener_on_icons ( icons, modal ) {
+  for (let i = 0; i < icons.length; i++) {
+    icons[i].addEventListener ('click', function () {
 
-// Закрытие по иконке
-menu__close.addEventListener ('click', function () {
-  menu__modal.style.transform = "translateX(-100%)";
-  html__body.style.overflowY = "visible";
-})
-menu__close__phone.addEventListener ('click', function () {
-  modal__call.style.transform = "translateX(120%)";
-  html__body.style.overflowY = "visible";
-})
-close_icon_feedback.addEventListener ('click', function () {
-  feedback_body.style.transform = "translateX(120%)";
-  html__body.style.overflowY = "visible";
-})
+      const margin_left_body = window
+          .getComputedStyle (body, null)
+          .getPropertyValue ("margin-left");
+
+      const ofsset_ml = `translateX(${ margin_left_body })`
+      modal.style.visibility = "visible";
+      body.classList.add ('disable-scroll');
+      modal.style.transform = ofsset_ml;
+    })
+  }
+}
+
+// Открывает вызывает модальное окно меню.
+export function open_modal__menu () {
+  modal__menu.style.transform = "translateX(0)";
+  body.classList.add ('disable-scroll')
+}
 
 // Закрытие по клику на блюре модального окна
-function close_modal_blur ( evt ) {
+export function close_on_blur ( evt ) {
   let element = evt.target
   evt.preventDefault ();
 
   let check_class__feedback = element.classList.contains ('modal-feedback--message');
   if (check_class__feedback) {
-    feedback_body.style.transform = "translateX(120%)";
+    modal__feedback.style.transform = "translateX(120%)";
     element.style.visibility = "hidden";
-    html__body.style.overflowY = "visible";
+    body.classList.remove ('disable-scroll')
   }
 
   let check_class__order = element.classList.contains ('modal-feedback--call');
   if (check_class__order) {
-    modal__call.style.transform = "translateX(120%)";
+    modal__phone.style.transform = "translateX(120%)";
     element.style.visibility = "hidden";
-    html__body.style.overflowY = "visible";
+    body.classList.remove ('disable-scroll')
   }
 
   let check_class__menu = element.classList.contains ('modal-menu');
   if (check_class__menu) {
-    menu__modal.style.transform = "translateX(-100%)";
-    element.style.visibility = "hidden";
-    html__body.style.overflowY = "visible";
+    modal__menu.style.transform = "translateX(-100%)";
+    body.classList.remove ('disable-scroll')
   }
 }
 
-modal__call.addEventListener ('click', close_modal_blur)
-feedback_body.addEventListener ('click', close_modal_blur)
-menu__modal.addEventListener ('click', close_modal_blur)
-
-// Добавляет EventListener для открытия модальных окон (кроме меню) на все иконки с одинаковыми классами.
-
-function add_listener__open_modal ( icons, modal ) {
-
-  for (let i = 0; i < icons.length; i++) {
-    icons[i].addEventListener ('click', function () {
-
-      const margin_left_body = window.getComputedStyle (html__body, null)
-                            .getPropertyValue ("margin-left");
-
-      const top = window.pageYOffset;
-      const ofsset_ml = `translateX(${margin_left_body})`
-      modal.style.visibility = "visible";
-      html__body.style.overflowY = "hidden";
-      modal.style.top = `${top}px`;
-      modal.style.transform = ofsset_ml;
-
-    })
+// Закрытие модального окна по клику на кнопку close
+export const close_on_icon = function ( modal ) {
+  if (modal.classList.contains ('modal-menu')) {
+    modal.style.transform = "translateX(-100%)";
   }
+  else {
+    modal.style.transform = "translateX(120%)";
+  }
+  body.classList.remove ('disable-scroll')
 }
-
-add_listener__open_modal (message_icons, feedback_body)
-add_listener__open_modal (call__icons, modal__call)
-
-//todo сделать чтобы модальное окно выплывало по центру экран независимо от положения на страннице
-
-
-
-
-
-
-
-
-
-

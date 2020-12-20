@@ -19,48 +19,49 @@
 *,
 *::after,
 *:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    overflow-x: hidden ;
+  overflow-x: hidden;
 }
+
 body {
-    font-family: "TT Lakes", serif;
-    font-weight: 400;
-    box-sizing: border-box;
-    background-color: $color-bg-main;
-    margin: 0 auto;
-    z-index: 15;
-    overflow-x: hidden;
+  font-family: "TT Lakes", serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  background-color: $color-bg-main;
+  margin: 0 auto;
+  z-index: 15;
+  overflow-x: hidden;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-bg-main;
-    border-top: 1px solid $color-main-top-line;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg-main;
+  border-top: 1px solid $color-main-top-line;
 }
 
 @media (max-width: 1439px) {
-    body {
-        position: relative;
-    }
+  body {
+    position: relative;
+  }
 }
 
 @media (min-width: 1440px) {
-    body {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        grid-template-rows: min-content 1fr;
-        background-color: #F8F8F8;
-        width: 1440px;
-    }
-    main {
-        border-top: none;
-        grid-column: 2/4;
-    }
+  body {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    background-color: #F8F8F8;
+    width: 1440px;
+  }
+  main {
+    border-top: none;
+    grid-column: 2/4;
+  }
 }
 
