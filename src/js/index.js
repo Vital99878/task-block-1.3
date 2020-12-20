@@ -8,8 +8,7 @@ import {
   icons__message,
   icon__close_feedback,
   icons__call,
-  icon__close_phone,
-  body,
+  icon__close_phone,body
 } from './modals'
 import { add_event_listener_on_icons, close_on_blur, close_on_icon, open_modal__menu } from './modals'
 

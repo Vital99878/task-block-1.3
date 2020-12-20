@@ -9,13 +9,12 @@ export let modal__feedback = document.querySelector ('.modal-feedback--message')
 export let icons__call = document.querySelectorAll ('.phone-icon');
 export let icon__close_phone = document.querySelector ('.close-icon--order');
 export let modal__phone = document.querySelector ('.modal-feedback--call');
-export const body = document.querySelector ("body");
+let body = document.querySelector ("body");
 
 // Добавляет EventListener для открытия модальных окон (кроме меню) на все иконки с одинаковыми классами.
 export function add_event_listener_on_icons ( icons, modal ) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
-
       const margin_left_body = window
           .getComputedStyle (body, null)
           .getPropertyValue ("margin-left");

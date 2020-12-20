@@ -34,7 +34,6 @@ body {
   box-sizing: border-box;
   background-color: $color-bg-main;
   margin: 0 auto;
-  z-index: 15;
   overflow-x: hidden;
 }
 
@@ -44,6 +43,8 @@ main {
   background-color: $color-bg-main;
   border-top: 1px solid $color-main-top-line;
 }
+
+
 
 @media (max-width: 1439px) {
   body {
@@ -65,3 +66,7 @@ main {
   }
 }
 
+
+.disable-scroll {
+  overflow: hidden;
+}
