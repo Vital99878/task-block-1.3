@@ -65,7 +65,6 @@ function swiper_575 () {
 
   else  {
     swiper_container.dataset.mobile = "false"
-    swiper.destroy()
   }
 }
 
