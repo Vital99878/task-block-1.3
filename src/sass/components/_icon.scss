@@ -18,14 +18,13 @@
     }
 }
 
-
 .close-icon {
     background: url("../img/burger-close.svg") no-repeat;
 
     &--feedback, &--order {
         @media (min-width: 576px) {
             position: absolute;
-            top: 48px;
+            top: 54px;
             left: -64px;
         }
     }
