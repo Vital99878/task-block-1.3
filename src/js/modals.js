@@ -53,7 +53,7 @@ export function close_on_blur ( evt ) {
   }
 
   let check_class__menu = element.classList.contains ('modal-menu');
-  if (check_class__menu) {
+  if (check_class__menu && innerWidth < 1440) {
     modal__menu.style.transform = "translateX(-100%)";
     body.classList.remove ('disable-scroll')
   }
