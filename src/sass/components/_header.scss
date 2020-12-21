@@ -1,0 +1,134 @@
+@import "../abstracts/variables";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-bg-nav;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 20px 24px;
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > * {
+      margin-right: 12px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    font-size: 0;
+
+    > *:not(:last-child) {
+      margin-right: 12px;
+    }
+
+  }
+
+  &__icon {
+    font-size: 0;
+    white-space: nowrap;
+
+    &:nth-child(2) {
+      @media (min-width: 320px) and (max-width: 768px) {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__logo {
+    @media (max-width: 768px) {
+      padding-right: 12px;
+      background: url("../img/divider.svg") 100% 50% no-repeat;
+    }
+    @media (min-width: 769px) {
+      padding-left: 12px;
+      background: url("../img/divider.svg") 0 50% no-repeat;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    background-color: $color-bg-main;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding: 0 16px;
+    text-align: end;
+    margin-top: 31px;
+
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  .header__icon:nth-child(n+3), .icons img {
+    display: none;
+  }
+
+  .menu img:nth-child(2) {
+    order: 0;
+  }
+}
+
+@media (max-width: 1339px) {
+  .header {
+    background-color: $color-bg-nav;
+    height: 66px;
+  }
+
+  .header .logo {
+    padding-right: 0;
+    padding-left: 16px;
+    background: url("../img/divider.svg") 0 50% no-repeat;
+  }
+
+  .icons {
+    display: flex;
+  }
+
+  .menu, .icons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .header--p-main {
+    padding: 0 12px 0 0;
+  }
+  .header__menu {
+    display: none;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .icons .header__icon:nth-child(1),
+  .icons .header__icon:nth-child(2),
+  .icons .header__icon:nth-child(3),
+  .icons img {
+    display: none;
+  }
+  .header__icon:nth-child(4), .header__icon:nth-child(5) {
+    background-position: 100% 50%;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    padding-right: 46px;
+  }
+
+  .icons button {
+    font-size: 16px;
+  }
+}
+
+
