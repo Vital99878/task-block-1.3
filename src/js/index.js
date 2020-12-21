@@ -11,11 +11,11 @@ import {
   icon__close_phone,
 } from './modals'
 import { add_event_listener_on_icons, close_on_blur, close_on_icon, open_modal__menu } from './modals'
-import { paragraph_2, content__paragraph_2, content, truncate, button__more_text } from "./read__more"
+import { paragraph_2, content__paragraph_2, content, truncate, button__more_text, rotate_btn } from "./read__more"
 content(content__paragraph_2, 81)
 
 button__more_text.addEventListener('click', () => content(content__paragraph_2))
-console.log(paragraph_2.dataset.truncate)
+button__more_text.addEventListener('click', rotate_btn)
 
 
 // Открыть меню

@@ -4,6 +4,19 @@ export let content__paragraph_2 = text[1].textContent;
 export let paragraph_2 = text[1];
 
 /* 81 symbols */
+export function rotate_btn () {
+  let text = button__more_text.textContent;
+
+  if (text === "Читать далее" && innerWidth < 1440) {
+    button__more_text.textContent = "Свернуть";
+    button__more_text.classList.add ("rotate");
+
+  }
+  else {
+    button__more_text.textContent = "Читать далее";
+    button__more_text.classList.remove ("rotate");
+  }
+}
 
 export function truncate ( str, maxlength ) {
   return ( str.length > maxlength ) ?
@@ -33,6 +46,7 @@ export let content = function ( textContent, length ) {
     text[1].textContent = truncated;
     p_2.dataset.truncate = 'true'
   }
+
 }
 
 
