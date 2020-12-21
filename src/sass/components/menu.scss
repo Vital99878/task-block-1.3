@@ -1,158 +1,155 @@
 @import "../abstracts/variables";
 
 .modal-menu {
-    position: fixed;
-    transition-property: transform;
-    transition: all 1s;
-    background: rgba(255, 255, 255, 0.5) 100% 100%;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
+  position: fixed;
+  transition-property: transform;
+  transition: all 1s;
+  background: rgba(255, 255, 255, 0.5) 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
 
-    @media  (min-width: 1440px) {
-        background-color: #FFFFFF;
+  @media (min-width: 1440px) {
+    position: relative;
+    width: 320px;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/ 4;
+    overflow-y: hidden;
+    background-color: #FFFFFF;
+  }
+
+  @media (max-width: 1439px) {
+    transform: translateX(-100%);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    .close-icon {
+      margin-right: 16px;
     }
 
-    &__header {
-        display: flex;
-        align-items: center;
-
-        .close-icon {
-            margin-right: 16px;
-        }
-
-        .search-icon {
-            margin-left: auto;
-        }
+    .search-icon {
+      margin-left: auto;
     }
+  }
 
-    &__icons > *{
-        margin-right: 16px;
+  &__icons > * {
+    margin-right: 16px;
+  }
+
+  &__icon:hover {
+    filter: hue-rotate(25deg);
+    transform: scale(1.05);
+  }
+
+  &__wrapper {
+    position: absolute;
+    min-height: 768px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 19px 24px 32px 24px;
+    box-shadow: 0 10px 20px 16px #F2F2F2;
+    background-color: #f8f8f8;
+    z-index: 5;
+    transition: all .6s ease-out;
+
+
+    @media (max-width: 360px) {
+      width: 100%;
+      max-width: 360px;
+      box-shadow: none;
+      overflow-x: scroll;
     }
-
-    &__icon:hover {
-        filter: hue-rotate(25deg);
-        transform: scale(1.05);
+    @media (min-width: 361px) and(max-width: 1439px) {
+      width: 320px;
+      overflow-x: scroll;
     }
-
     @media (min-width: 1440px) {
-        position: relative;
-        width: 320px;
-        height: 100%;
-        grid-column: 1/2;
-        grid-row: 1/ 4;
-        overflow-y: hidden;
+      background-color: #FFFFFF;
+      padding-top: 24px;
+      position: static;
+
+      width: 320px;
+      height: 1024px;
+      box-shadow: 0 0 0 0;
+      transform: translateX(0);
+    }
+  }
+
+  .navigation {
+    margin-top: 50px;
+    margin-bottom: auto;
+
+    &__list {
+      list-style: none;
     }
 
-    @media (max-width: 1439px) {
-        transform: translateX(-100%);
+    &__link {
+      display: block;
+      text-decoration: none;
+      font-weight: 500;
+      color: #1B1C21;
+      margin-bottom: 32px;
+      transform-origin: bottom left;
+      transition: all .4s;
+
+      &--active {
+        height: 32px;
+        background: url("../img/highlight.svg") 0 0 no-repeat;
+        background-size: 4px 32px;
+        margin-bottom: 26px;
+        padding-top: 6px;
+        padding-left: 24px;
+        margin-left: -24px;
+        color: $menu-item-active;
+      }
     }
 
-    &__wrapper {
-        position: absolute;
-        min-height: 768px;
-        display: flex;
-        align-content: center;
-        flex-direction: column;
-        padding: 19px 24px 32px 24px;
-        box-shadow: 0 10px 20px 16px #F2F2F2;
-        background-color: #f8f8f8;
-        z-index: 5;
-        transition: all .6s ease-out;
+    &__link:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
 
+  .contacts {
+    margin-top: 16px;
 
-        @media (max-width: 360px) {
-            width: 100%;
-            max-width: 360px;
-            box-shadow: none;
-            overflow-x: scroll;
-        }
-        @media (min-width: 361px) and(max-width: 1439px) {
-            width: 320px;
-            overflow-x: scroll;
-        }
-        @media (min-width: 1440px) {
-            background-color: #FFFFFF;
-            padding-top: 24px;
-            position: static;
-
-            width: 320px;
-            height: 1024px;
-            box-shadow: 0 0 0 0;
-            transform: translateX(0);
-        }
+    &__email {
+      display: block;
+      text-decoration: none;
+      color: $color-text-content;
+      font-size: 16px;
+      font-weight: 500;
     }
 
-    .navigation {
-        margin-top: 50px;
-        margin-bottom: auto;
+    &__phone {
+      display: block;
+      text-decoration: none;
+      color: $color-text-content;
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: 12px;
+    }
+  }
 
-        &__list {
-            list-style: none;
-        }
+  .lang-toggle {
+    margin-top: 40px;
 
-        &__link {
-            display: block;
-            text-decoration: none;
-            font-weight: 500;
-            color: #1B1C21;
-            margin-bottom: 32px;
-            transform-origin: bottom left;
-            transition: all .4s;
-
-            &--active {
-                height: 32px;
-                background: url("../img/highlight.svg") 0 0 no-repeat;
-                background-size: 4px 32px;
-                margin-bottom: 26px;
-                padding-top: 6px;
-                padding-left: 24px;
-                margin-left: -24px;
-                color: $menu-item-active;
-            }
-        }
-
-        &__link:hover {
-            transform: scale(1.1);
-            opacity: 0.8;
-        }
+    button {
+      border: none;
+      background-color: transparent;
+      margin-right: 7px;
+      cursor: pointer;
     }
 
-    .contacts {
-        margin-top: 16px;
-
-        &__email {
-            display: block;
-            text-decoration: none;
-            color: $color-text-content;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        &__phone {
-            display: block;
-            text-decoration: none;
-            color: $color-text-content;
-            font-weight: bold;
-            font-size: 24px;
-            margin-top: 12px;
-        }
+    .active {
+      color: $menu-item-active;
     }
-
-    .lang-toggle {
-        margin-top: 40px;
-
-        button {
-            border: none;
-            background-color: transparent;
-            margin-right: 7px;
-            cursor: pointer;
-        }
-
-        .active {
-            color: $menu-item-active;
-        }
-    }
+  }
 }
 
 
