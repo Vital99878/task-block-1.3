@@ -1,0 +1,72 @@
+@import "abstracts/typography";
+@import "components/header";
+@import "components/heading-1";
+@import "components/menu";
+@import "components/content";
+@import "components/tabs";
+@import "components/more";
+@import "components/service";
+@import "components/menu";
+@import "components/footer";
+@import "components/order";
+@import "components/price-list";
+@import "components/price-card";
+@import "components/feedback";
+@import "components/icon-btn";
+@import "components/icon";
+
+
+*,
+*::after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "TT Lakes", serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  background-color: $color-bg-main;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg-main;
+  border-top: 1px solid $color-main-top-line;
+}
+
+
+
+@media (max-width: 1439px) {
+  body {
+    position: relative;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    background-color: #F8F8F8;
+    width: 1440px;
+  }
+  main {
+    border-top: none;
+    grid-column: 2/4;
+  }
+}
+
+
+.disable-scroll {
+  overflow: hidden;
+}

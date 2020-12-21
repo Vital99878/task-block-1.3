@@ -10,7 +10,6 @@
         color: $color-text-tab;
         padding: 0 6px;
 
-
         &--align-left {
             text-align: left;
         }
@@ -25,8 +24,8 @@
     }
 
     @media (max-width: 600px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        display: flex;
+        flex-direction: column;
         padding: 16px;
         .footer__content:not(:last-child) {
             margin-bottom: 16px;
@@ -43,8 +42,8 @@
     @media (min-width: 769px) {
         padding: 32px;
     }
-    @media (min-width: 1120px) {
-        grid-column: 2/ -1;
+    @media (min-width: 1440px) {
+        grid-column: 2/ 4;
     }
 
 }

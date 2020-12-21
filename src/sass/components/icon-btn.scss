@@ -1,0 +1,46 @@
+@import "../abstracts/variables";
+
+
+.close-modal {
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .4s;
+    background: url("../img/burger-close.svg") no-repeat transparent;
+
+
+    &--pos-my {
+        margin-bottom: 32px;
+    }
+
+    &--hidden-576 {
+
+    }
+
+    &:hover {
+        filter: hue-rotate(25deg);
+        transform: scale(1.05);
+    }
+}
+
+@media (min-width: 576px) {
+    .close-modal {
+        position: absolute;
+        left: -64px;
+        top: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
