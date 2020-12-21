@@ -36,21 +36,16 @@
             background-position: 0 50%;
         }
     }
-
 }
 
-
-
-
-
 @media (min-width: 576px) {
-    .page-header--modal {
+    .page-heading--modal {
         margin-left: -32px;
     }
 }
 
 @media (max-width: 576px) {
-    .page-header--modal {
+    .page-heading--modal {
         margin-left: -16px;
         padding-left: 16px;
     }
