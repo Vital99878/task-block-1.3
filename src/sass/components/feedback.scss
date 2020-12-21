@@ -16,7 +16,7 @@
   transition-property: top, transform;
   transition-delay: 0s, .2s;
   transition: .1s, 1s;
-  overflow-y: hidden;
+  overflow-y: auto;
 
 }
 
@@ -45,6 +45,8 @@
   }
 
   input, textarea {
+    font-family: "TT Lakes",sans-serif;
+    font-weight: normal;
     border: 1px solid #EAEAEA;
     border-radius: 8px;
     max-width: 376px;
@@ -74,9 +76,13 @@
   }
 
   &__personal-info {
+    font-family: "TT Lakes",sans-serif;
+    font-weight: normal;
     margin-bottom: 24px;
 
     &--impotent {
+      font-family: "TT Lakes",sans-serif;
+      font-weight: normal;
       color: #FF3E79;
     }
   }
