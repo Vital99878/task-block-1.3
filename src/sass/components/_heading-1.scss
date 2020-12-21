@@ -23,6 +23,12 @@
     grid-column: 2/ 3;
   }
 
+  &--desktop-mt {
+    @media (min-width: 1440px) {
+      margin-top: 31px;
+    }
+  }
+
   &--modal {
     @media (max-width: 576px) {
       margin-left: -17px;
@@ -38,7 +44,6 @@
       margin-bottom: 16px;
     }
   }
-
 
 }
 
