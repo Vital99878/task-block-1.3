@@ -24,30 +24,20 @@
     grid-column: 2/ 3;
   }
 
-}
+  &--modal {
+    @media (max-width: 576px) {
+      margin-left: -17px;
+      padding-left: 16px;
+    }
 
-
-@media (min-width: 320px) and (max-width: 768px) {
-  header .page-heading {
-    display: none;
-  }
-  main {
-    .page-heading {
-      padding: 6px 16px;
-      background-position: 0 50%;
+    @media (min-width: 576px) {
+      margin-left: -33px;
     }
   }
+
 }
 
-@media (min-width: 576px) {
-  .page-heading--modal {
-    margin-left: -33px;
-  }
-}
 
-@media (max-width: 576px) {
-  .page-heading--modal {
-    margin-left: -17px;
-    padding-left: 16px;
-  }
-}
+
+
+
