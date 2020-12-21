@@ -60,6 +60,7 @@
     padding: 0 16px;
     text-align: end;
     margin-top: 31px;
+
   }
 }
 
@@ -99,7 +100,7 @@
 
 @media (min-width: 1440px) {
   .header--p-main {
-    padding: 0;
+    padding: 0 12px 0 0;
   }
   .header__menu {
     display: none;
