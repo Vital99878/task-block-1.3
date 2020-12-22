@@ -11,12 +11,15 @@ function rm_active_class ( active_class, no_active_class ) {
 const EventHandler = ( active_class, no_active_class ) => ( evt ) => {
   evt.preventDefault()
   let item = evt.target;
-  rm_active_class (active_class, no_active_class)
 
-  if (item.classList.contains("no_active_class")) {
+// работает с тегом a
+  if (item.classList.contains(no_active_class)) {
+    rm_active_class (active_class, no_active_class)
     item.classList.add (active_class)
   }
-  else {
+  // работает с тегом li
+  else if(item.parentNode.classList.contains(no_active_class)) {
+    rm_active_class (active_class, no_active_class)
     item.parentNode.classList.add (active_class)
   }
 
