@@ -3,7 +3,7 @@
 .modal-menu {
   position: fixed;
   transition-property: transform;
-  transition: all 1s;
+  transition: .3s;
   background: rgba(255, 255, 255, 0.5) 100% 100%;
   width: 100vw;
   height: 100vh;
@@ -20,7 +20,8 @@
   }
 
   @media (max-width: 1439px) {
-    transform: translateX(-100%);
+    transform-origin: 42px 33px;
+    transform: scale(0);
   }
 
   &__header {

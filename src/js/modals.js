@@ -29,7 +29,7 @@ export function add_event_listener_on_icons ( icons, modal ) {
 
 // Открывает вызывает модальное окно меню.
 export function open_modal__menu () {
-  modal__menu.style.transform = "translateX(0)";
+  modal__menu.style.transform = "scale(1)";
   body.classList.add ('disable-scroll')
 }
 
@@ -54,7 +54,7 @@ export function close_on_blur ( evt ) {
 
   let check_class__menu = element.classList.contains ('modal-menu');
   if (check_class__menu && innerWidth < 1440) {
-    modal__menu.style.transform = "translateX(-100%)";
+    modal__menu.style.transform = "scale(0)";
     body.classList.remove ('disable-scroll')
   }
 }
@@ -62,7 +62,7 @@ export function close_on_blur ( evt ) {
 // Закрытие модального окна по клику на кнопку close
 export const close_on_icon = function ( modal ) {
   if (modal.classList.contains ('modal-menu')) {
-    modal.style.transform = "translateX(-100%)";
+    modal__menu.style.transform = "scale(0)";
   }
   else {
     modal.style.transform = "translateX(120%)";
