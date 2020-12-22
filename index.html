@@ -10,7 +10,6 @@
 <link href="style.css" rel="stylesheet"></head>
 <body>
 
-
 <div class="modal-menu">
   <div class="modal-menu__wrapper">
     <div class="modal-menu__header">
@@ -57,8 +56,8 @@
     <input type="text" placeholder="Телефон">
     <input type="text" placeholder="Электронная почта">
     <textarea placeholder="Сообщение" rows="5"></textarea>
-    <p class="feedback__personal-info">Нажимая “отправить”, вы даете согласие на <span class="feedback__personal-info--impotent">обработку персональных данных</span> и соглашаетесь с нашей
-      <span class="feedback__personal-info--impotent">политикой конфиденциальности</span></p>
+    <p class="feedback__personal-info">Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей
+      <span>политикой конфиденциальности</span></p>
     <button class="order order--pos-end"><span>Отправить</span></button>
   </form>
 </div>
@@ -91,7 +90,6 @@
 
 <main>
 
-
   <ul class="tabs">
     <li class="tabs__tab tabs__tab--selected"><a href="pages/feedback.html">Ремонтируемые бренды</a></li>
     <li class="tabs__tab"><a class="tabs__link" href="">Ремонтируемые устройства</a></li>
@@ -117,54 +115,55 @@
 
   <section class="service">
     <h2 class="service__title">Ремонт техники различных брендов</h2>
-
-    <div class="swiper-container" data-mobile="false">
-      <ul class="swiper-wrapper service__list service__list--brands">
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/lenovo.svg" alt="Lenovo"></a>
-        </li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/samsung.svg" alt="Samsung"></a></li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/apple.svg" alt="Apple"></a></li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/viewsonic.svg" alt="Viewsonic"></a>
-        </li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/bosh.svg" alt="Bosh"></a>
-        </li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/hp.svg" alt="HP"></a>
-        </li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/sony.svg" alt="Sony"></a>
-        </li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/bosh.svg" alt="Bosh"></a>
-        </li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/lenovo.svg" alt="Lenovo"></a>
-        </li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/samsung.svg" alt="Samsung"></a></li>
-        <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/apple.svg" alt="Apple"></a></li>
-      </ul>
-      <div class="swiper-pagination"></div>
+    <div class="service__wrapper">
+      <div class="swiper-container" data-mobile="false">
+        <ul class="swiper-wrapper service__list service__list--brands">
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/lenovo.svg" alt="Lenovo"></a>
+          </li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/samsung.svg" alt="Samsung"></a></li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/apple.svg" alt="Apple"></a></li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/viewsonic.svg" alt="Viewsonic"></a>
+          </li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/bosh.svg" alt="Bosh"></a>
+          </li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/hp.svg" alt="HP"></a>
+          </li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/sony.svg" alt="Sony"></a>
+          </li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/bosh.svg" alt="Bosh"></a>
+          </li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/lenovo.svg" alt="Lenovo"></a>
+          </li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/samsung.svg" alt="Samsung"></a></li>
+          <li class="swiper-slide service__brand"><a class="service__link" href=""><img src="img/apple.svg" alt="Apple"></a></li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+      <button class="more more--brands" type="button">Показать все</button>
     </div>
-
-    <button class="more more--brands more--ml-32" type="button">Показать все</button>
   </section>
 
   <section class="service">
     <h2 class="service__title">Ремонт различных видов техники</h2>
-    <div class="swiper-container" data-mobile="false">
-      <ul class="swiper-wrapper service__list service__list--technics">
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ноутбуков</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт планшетов</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ПК</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт мониторов</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт телефонов</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ноутбуков</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт планшетов</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ПК</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт мониторов</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт телефонов</a></li>
-        <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ноутбуков</a></li>
-      </ul>
-      <div class="swiper-pagination"></div>
+    <div class="service__wrapper">
+      <div class="swiper-container" data-mobile="false">
+        <ul class="swiper-wrapper service__list service__list--technics">
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ноутбуков</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт планшетов</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ПК</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт мониторов</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт телефонов</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ноутбуков</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт планшетов</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ПК</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт мониторов</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт телефонов</a></li>
+          <li class="swiper-slide service__technic"><a class="service__link" href="">Ремонт ноутбуков</a></li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+      <button class="more more--technics" type="button">Показать все</button>
     </div>
-
-    <button class="more more--technics more--ml-32" type="button">Показать все</button>
   </section>
 
   <section class="service">
@@ -301,10 +300,10 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <div class="price-list__info">
-      <p class="price-list__info--text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+    <div class="service__info">
+      <p class="service__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
         услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-      <a class="price-list__info--offer">Получить коммерческое предложение</a>
+      <a class="service__offer">Получить коммерческое предложение</a>
     </div>
   </section>
 </main>
