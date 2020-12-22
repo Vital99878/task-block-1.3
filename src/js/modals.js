@@ -9,19 +9,20 @@ export let modal__feedback = document.querySelector ('.modal-feedback--message')
 export let icons__call = document.querySelectorAll ('.phone-icon');
 export let icon__close_phone = document.querySelector ('.close-icon--order');
 export let modal__phone = document.querySelector ('.modal-feedback--call');
-let body = document.querySelector ("body");
+export let body = document.querySelector ("body");
+export let ht = document.querySelector ("html");
 
 // Добавляет EventListener для открытия модальных окон (кроме меню) на все иконки с одинаковыми классами.
 export function add_event_listener_on_icons ( icons, modal ) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
       const margin_left_body = window
-          .getComputedStyle (body, null)
-          .getPropertyValue ("margin-left");
+        .getComputedStyle (body, null)
+        .getPropertyValue ("margin-left");
 
       const ofsset_ml = `translateX(${ margin_left_body })`
       modal.style.visibility = "visible";
-      body.classList.add ('disable-scroll');
+      ht.style.overflow = "hidden"
       modal.style.transform = ofsset_ml;
     })
   }
@@ -30,9 +31,8 @@ export function add_event_listener_on_icons ( icons, modal ) {
 // Открывает вызывает модальное окно меню.
 export function open_modal__menu () {
   modal__menu.style.transform = "scale(1)";
-  body.classList.add ('disable-scroll')
-  body.style.overflow = "hidden"
-  console.log(body.style.overflow)
+  ht.style.overflow = "hidden"
+
 }
 
 // Закрытие по клику на блюре модального окна
@@ -44,20 +44,20 @@ export function close_on_blur ( evt ) {
   if (check_class__feedback) {
     modal__feedback.style.transform = "translateX(120%)";
     element.style.visibility = "hidden";
-    body.classList.remove ('disable-scroll')
+    ht.style.overflow = "visible"
   }
 
   let check_class__order = element.classList.contains ('modal-feedback--call');
   if (check_class__order) {
     modal__phone.style.transform = "translateX(120%)";
     element.style.visibility = "hidden";
-    body.classList.remove ('disable-scroll')
+    ht.style.overflow = "visible"
   }
 
   let check_class__menu = element.classList.contains ('modal-menu');
   if (check_class__menu && innerWidth < 1440) {
     modal__menu.style.transform = "scale(0)";
-    body.classList.remove ('disable-scroll')
+    ht.style.overflow = "visible"
   }
 }
 
@@ -69,5 +69,5 @@ export const close_on_icon = function ( modal ) {
   else {
     modal.style.transform = "translateX(120%)";
   }
-  body.classList.remove ('disable-scroll')
+  ht.style.overflow = "visible"
 }
