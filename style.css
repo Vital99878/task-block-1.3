@@ -307,7 +307,7 @@
     .tabs__tab a {
       text-decoration: none;
       color: inherit; }
-  .tabs__tab-selected {
+  .tabs__tab--selected {
     color: #7E7E82;
     background: #FFFFFF;
     border: 2px solid #B8FFEC;
