@@ -12,10 +12,11 @@ import {
 } from './modals'
 import { add_event_listener_on_icons, close_on_blur, close_on_icon, open_modal__menu } from './modals'
 import {  content__paragraph_2, content,  button__more_text, rotate_btn } from "./read__more"
-import {navigation__list, do_active_class} from './menu'
+import {navigation__list, active_menu, tabs, active_tab} from './menu'
 
 
-navigation__list.addEventListener ('click', do_active_class )
+navigation__list.addEventListener ('click', active_menu )
+tabs.addEventListener ('click', active_tab )
 
 
 content(content__paragraph_2, 81)

@@ -1,19 +1,26 @@
 export let navigation__list = document.querySelector ('.navigation__list')
+export let tabs = document.querySelector ('.tabs')
 
-function rm_active_class ( arr ) {
-  for (let i = 0; i < arr.length; i++) {
+function rm_active_class ( active_class, no_active_class ) {
+  let item = document.querySelector('.'+active_class)
+  item.classList.remove(active_class)
+  item.classList.add( no_active_class )
+}
 
-    if (arr[i].firstElementChild.className === 'navigation__link navigation__link--active') {
 
-      arr[i].firstElementChild.classList.remove ('navigation__link--active')
-    }
+const EventHandler = ( active_class, no_active_class ) => ( evt ) => {
+  evt.preventDefault()
+  let item = evt.target;
+  rm_active_class (active_class, no_active_class)
+
+  if (item.classList.contains("no_active_class")) {
+    item.classList.add (active_class)
   }
+  else {
+    item.parentNode.classList.add (active_class)
+  }
+
 }
 
-export function do_active_class ( evt ) {
-  let navigation__items = navigation__list.children
-  rm_active_class (navigation__items)
-  evt.target.classList.add ('navigation__link--active')
-}
-
-
+export let active_menu = EventHandler ('navigation__link--active', 'navigation__link')
+export let active_tab = EventHandler ('tabs__tab--selected', 'tabs__tab')
