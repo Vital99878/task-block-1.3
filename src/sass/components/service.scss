@@ -1,5 +1,9 @@
 
 .service {
+
+    &__wrapper {
+      padding: 0 16px;
+    }
     padding-bottom: 32px;
 
     &__title {
@@ -15,11 +19,6 @@
         @media (min-width: 576px) {
             padding: 16px 24px;
         }
-    }
-
-    &__list {
-        padding: 0 16px;
-
     }
 
     &__brand {
@@ -114,7 +113,7 @@
         display: none;
     }
     .service__list {
-        padding: 24px;
+        padding: 24px 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 24px;
