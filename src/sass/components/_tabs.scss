@@ -8,9 +8,7 @@
     padding-left: 36px;
     overflow-x: hidden;
 
-    @media (min-width: 320px) and (max-width: 575px) {
-        margin-bottom: 0;
-    }
+
 
     &__tab {
         list-style: none;
@@ -35,6 +33,10 @@
         box-sizing: border-box;
         border-radius: 6px;
     }
+
+    @media (min-width: 320px) and (max-width: 575px) {
+    margin-bottom: 0;
+  }
 
     @media (min-width: 320px) and (max-width: 768px) {
         padding: 6px 16px;
