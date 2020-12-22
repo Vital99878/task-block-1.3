@@ -31,6 +31,8 @@ export function add_event_listener_on_icons ( icons, modal ) {
 export function open_modal__menu () {
   modal__menu.style.transform = "scale(1)";
   body.classList.add ('disable-scroll')
+  body.style.overflow = "hidden"
+  console.log(body.style.overflow)
 }
 
 // Закрытие по клику на блюре модального окна

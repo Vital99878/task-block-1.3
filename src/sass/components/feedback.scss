@@ -16,8 +16,7 @@
   transition-property: top, transform;
   transition-delay: 0s, .2s;
   transition: .1s, 1s;
-  overflow-y: hidden;
-
+  overflow: hidden;
 }
 
 .feedback {
@@ -80,7 +79,7 @@
     font-weight: normal;
     margin-bottom: 24px;
 
-    &--impotent {
+    span {
       font-family: "TT Lakes",sans-serif;
       font-weight: normal;
       color: #FF3E79;
