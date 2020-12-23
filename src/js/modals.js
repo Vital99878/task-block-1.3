@@ -16,8 +16,16 @@ export let ht = document.querySelector ("html");
 export function add_event_listener_on_icons ( icons, modal ) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
+      const margin_left_body = window
+        .getComputedStyle (body, null)
+        .getPropertyValue ("margin-left");
+
+      const ofsset_ml = `translateX(${ margin_left_body })`
+      console.log(ofsset_ml)
+      modal.style.transform = ofsset_ml;
+
       modal.style.visibility = "visible";
-      modal.style.transform = "scale(1)";
+      modal.style.transform = `scale(1) ${ofsset_ml}`;
       modal.style.opacity = "1";
       ht.style.overflow = "hidden"
     })
