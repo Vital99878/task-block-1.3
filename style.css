@@ -728,13 +728,13 @@
   z-index: 20;
   transform: scale(0);
   margin: 0 auto;
-  transition-property: transform;
-  transition: .4s;
+  opacity: 0;
+  transition: all .5s;
   overflow: hidden; }
   .modal-feedback--message {
-    transform-origin: 50vw -120px; }
+    transform-origin: 50vw -320px; }
   .modal-feedback--call {
-    transform-origin: 50vw -120px; }
+    transform-origin: 50vw -320px; }
 
 .feedback {
   position: absolute;
