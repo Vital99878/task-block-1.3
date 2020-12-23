@@ -16,10 +16,10 @@ export let ht = document.querySelector ("html");
 export function add_event_listener_on_icons ( icons, modal ) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
-
       modal.style.visibility = "visible";
-      ht.style.overflow = "hidden"
       modal.style.transform = "scale(1)";
+      modal.style.opacity = "1";
+      ht.style.overflow = "hidden"
     })
   }
 }
