@@ -16,14 +16,10 @@ export let ht = document.querySelector ("html");
 export function add_event_listener_on_icons ( icons, modal ) {
   for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener ('click', function () {
-      const margin_left_body = window
-        .getComputedStyle (body, null)
-        .getPropertyValue ("margin-left");
 
-      const ofsset_ml = `translateX(${ margin_left_body })`
       modal.style.visibility = "visible";
       ht.style.overflow = "hidden"
-      modal.style.transform = ofsset_ml;
+      modal.style.transform = "scale(1)";
     })
   }
 }
@@ -42,15 +38,13 @@ export function close_on_blur ( evt ) {
 
   let check_class__feedback = element.classList.contains ('modal-feedback--message');
   if (check_class__feedback) {
-    modal__feedback.style.transform = "translateX(120%)";
-    element.style.visibility = "hidden";
+    modal__feedback.style.transform = "scale(0)";
     ht.style.overflow = "visible"
   }
 
   let check_class__order = element.classList.contains ('modal-feedback--call');
   if (check_class__order) {
-    modal__phone.style.transform = "translateX(120%)";
-    element.style.visibility = "hidden";
+    modal__phone.style.transform = "scale(0)";
     ht.style.overflow = "visible"
   }
 
@@ -67,7 +61,7 @@ export const close_on_icon = function ( modal ) {
     modal__menu.style.transform = "scale(0)";
   }
   else {
-    modal.style.transform = "translateX(120%)";
+    modal.style.transform = "scale(0)";
   }
   ht.style.overflow = "visible"
 }
